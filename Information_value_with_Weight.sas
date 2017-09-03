@@ -22,34 +22,17 @@ run;
 
 %let indata  			= Dev;			/* input data name with libname */
 %let libname 			= work;
-%let dep_var 			= GBI_Tag;  		/* mention name of dependent variable. without indeterminate */
+%let dep_var 			= GBI_Tag;  	/* mention name of dependent variable. without indeterminate */
 %let weight  			= wgt; 			/* weight variable. if there is no weight then put 1 */
 %let output	 			= &out.; 		/* Output report file with path */
 %let delete_all_file 	= 0;			/* 1= delete all files in work, 0=do not delete */
 
 /* Numeric variables list */
-%let BinCVarList = 
-ADVEMI
-AMOUNT_FINANACED
-APPLICANT_AGE
-PROCESSING_FEES
-RATE_OF_INTEREST
-SOURCE_CODE
-TENURE
-;
+%let BinCVarList = ;
 %put &BinCVarList;
  
 /* Character variables list */
-%let BinDVarList = 
-APPLICANT_TYPE
-APPLICATION_STATUS
-AREA
-GENDER
-GUARANTOR
-INSURANCE_TYPE
-
-
-;
+%let BinDVarList = ;
 %put &BinDVarList;
 
 /*******************************************************************************************************************/

@@ -15,7 +15,7 @@ libname local  'F:\AMIT\TVS';
 %let No_Var			= 6;			 	/* Total Number of variable for Characteristic Analysis*/
 %let ext			= _B;				/* Suffix of bin variable */
 /* List of variables for Characteristic Analysis */
-%let WoE_Var_list	= GENDER	CO_BORROWER BANK_ACCOUNT_STATUS	GROSS_SAL RATE_OF_INTEREST AMOUNT_FINANACED; 
+%let WoE_Var_list	= ; 
 /**********************************************************************************************************************/
 
 /**********************************************************************************************************************/

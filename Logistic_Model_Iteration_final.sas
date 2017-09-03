@@ -802,35 +802,3 @@ options mprint mlogic merror serror source2  linesize=256;
 /***************************************************************************************************************/
 /*******END OF MACRO *******************************************************************************************/
 /***************************************************************************************************************/
-
-/**/
-/**/
-/*%let output = C:\Users\Lenovo\Downloads\fwdproject\test\;*/
-/*libname local  "&output.";*/
-
-
-/*data   Ttd_dev;*/
-/*set    local.Ttd_dev;*/
-/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\32_MB_Num_woe_code_var_missing.sas";*/
-/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\02_MB_Num_woe_varlist_var_missing.sas";*/
-/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\31_MB_Num_woe_code_Nomissing.sas";*/
-/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\01_MB_Num_woe_varlist_Nomissing.sas";*/
-/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\52_MB_Num_CA_code_var_missing.sas";*/
-/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\62_MB_Num_CA_Varlist_var_missing.sas";*/
-/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\51_MB_Num_CA_code_Nomissing.sas";*/
-/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\61_MB_Num_CA_Varlist_Nomissing.sas";*/
-/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\35_MB_Char_woe_code_Nomissing.sas";*/
-/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\05_MB_Char_woe_varlist_Nomissing.sas";*/
-/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\55_MB_Char_CA_code_Nomissing.sas";*/
-/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\65_MB_Char_CA_Varlist_Nomissing.sas";*/
-/*       */
-/* Keep  GBI_TAG wgt */
-/*   &NUM_woe_Num_var_missing.           */
-/*   &NUM_woe_Num_nonmissing.            */
-/*   &NUM_CA_Num_var_missing.            */
-/*   &NUM_CA_Num_nonmissing.             */
-/*   &Char_woe_Char_nonmissing.          */
-/*   &Char_CA_Char_nonmissing.           */
-/*                                       ;   */
-/*                                           */
-/*RUN    ;*/

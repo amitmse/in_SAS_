@@ -45,6 +45,15 @@ options mprint mlogic merror serror source2  linesize=256;
 	/*	scale_score = round(score*1000,1);*/
 	run;
 
+
+
+	proc freq data=&input_data._1 noprint;
+			tables Raw_score_model*&bad_var.  / measures;
+			output out=somersd(keep=_SMDRC_)	 smdrc;
+			run;
+	
+	proc sql noprint; select  _SMDRC_ into: Somers_D  from somersd;quit;
+
 	proc freq data = &input_data._1 noprint;
 		tables &depdended_var. / out = BadsCount;
 		weight wgt ;
@@ -136,13 +145,11 @@ options mprint mlogic merror serror source2  linesize=256;
 	proc sql /*noprint*/; 
 		create table _summary_ks_	as 
 				select 
-					&iteratation.					as Model length 5,
-					max(KS) 						as KS_&input_data. 	FORMAT=PERCENT7.2,
-					abs((sum(Gini)-(0.5))/(0.5)) 	as Gini_index_&input_data.,
-					case
-						when sum(Break_Risk_Rank) >0 then 'Yes'
-						else 'No'
-						end as Risk_rank_break_&input_data.
+					&iteratation.					as Model length 5						,
+					max(KS) 						as KS_&input_data. 	FORMAT=PERCENT7.2	,
+					abs((sum(Gini)-(0.5))/(0.5)) 	as Gini_index_&input_data.				,
+					&Somers_D						as Somers_D_&input_data.				,
+					case when sum(Break_Risk_Rank) >0 then 'Yes' else 'No' end as Risk_rank_break_&input_data.
 				from data5; 
 	quit;
 
@@ -152,7 +159,7 @@ options mprint mlogic merror serror source2  linesize=256;
 	run;
 
 	proc print data = data5 (drop=  Gini)	noobs;	run;
-	proc delete data = &input_data._1 data1 data2 data3 data4 data5 _summary_ks_ BadsCount; 
+	proc delete data = &input_data._1 data1 data2 data3 data4 data5 _summary_ks_ BadsCount somersd; 
 	run;
 
 %mend KS_CALCULATION;
@@ -175,6 +182,7 @@ options mprint mlogic merror serror source2  linesize=256;
 				model_score 		= round(Raw_score_model*1000,1);
 				non_model_score		= round(Raw_score_non_model*1000,1);
 		run;
+
 		/* generating the lift table*/;
 		Title "KS Table: &indata. - model_score"; 
 			%KS(in_data		=&indata._scored	,	
@@ -767,38 +775,223 @@ options mprint mlogic merror serror source2  linesize=256;
 	proc printto;run;
 /****************************************************************************************************/
 %mend Logistic_model;
+
 /**************************************************************************************************************/;
 /************************ Macro End **************************************************************************/;
 /************************************************************************************************************/;
 /*******Provide Input ******************************************************************************************/
-%let dev_data			= Ttd_dev		; 	/* development dataset name*/
-%let val1_data			= 				;	/* validation dataset name otherwise leave blank*/
-%let val2_data			= 				;	/* validation dataset name otherwise leave blank*/
-%let val3_data			= 				;	/* validation dataset name otherwise leave blank*/
-%let bad_var			= GBI_TAG		;	/* Dependent (good/bad) variable. */
-%let model				= DESCENDING	;	/* DESCENDING:Model 1, otherwise leave blank, by default it models 0*/
-%let weight_var			= wgt			;	/* weight variable otherwise blank */
-%let ks_bin				= 10			;	/* number of bins in KS/LIFT/SINGLE GAIN report */
-%let sort_score			= 1				;	/* sort the score varible while generating KS table*/
-%let stepwise			= 1				;	/* 1= run Stepwise*/
-%let exit 				= 0.01			;	/* "0.01/0.05" SLS, significant level for removing a variable in stepwise*/
-%let entry				= 0.01			;	/* SLE, significant level for entering a variable in stepwise*/
-%let VIF_CUT_OFF		= 1.5			;	/* VIF(variance inflation factor) cut off for dropping a variable*/
-%let sign_check			= 0				; 	/* Check the sign of coeff. and buid model only with same sign */
-%let P_Value_CUT_OFF	= 0.05			;	/* P value significant level,drop varible based on it*/
-%let TOTAL_NO_OF_VAR	= 13			;	/* Total number of variable in the model*/
 
-%let varlist 			= &NUM_woe_Num_var_missing.   &NUM_woe_Num_nonmissing.  &Char_woe_Char_nonmissing.
-										;	/* List of model variable */
+%let dev_data			= dev				; 	/* development dataset name*/
+%let val1_data			= val				;	/* validation dataset name otherwise leave blank*/
+%let val2_data			= 					;	/* validation dataset name otherwise leave blank*/
+%let val3_data			= 					;	/* validation dataset name otherwise leave blank*/
+%let bad_var			= ab_ivpr_bad_pl	;	/* Dependent (good/bad) variable. */
+%let model				= DESCENDING		;	/* DESCENDING:Model 1, otherwise leave blank, by default it models 0*/
+%let weight_var			= wgt				;	/* weight variable otherwise blank */
+%let ks_bin				= 10				;	/* number of bins in KS/LIFT/SINGLE GAIN report */
+%let sort_score			= 1					;	/* sort the score varible while generating KS table*/
+%let stepwise			= 1					;	/* 1= run Stepwise*/
+%let exit 				= 0.01				;	/* "0.01/0.05" SLS, significant level for removing a variable in stepwise*/
+%let entry				= 0.01				;	/* SLE, significant level for entering a variable in stepwise*/
+%let VIF_CUT_OFF		= 2.0				;	/* VIF(variance inflation factor) cut off for dropping a variable*/
+%let sign_check			= 0					; 	/* Check the sign of coeff. and buid model only with same sign */
+%let P_Value_CUT_OFF	= 0.05				;	/* P value significant level,drop varible based on it*/
+%let TOTAL_NO_OF_VAR	= 10				;	/* Total number of variable in the model*/
 
-%let info_val_data		= overall		;	/* Information value data */
-%let infoval_data_path	= C:\Users\Lenovo\Downloads\fwdproject\test\				
-										;	/* Provide the path of info val dataset generated by auto biining*/
-%let Excel				= 1				;	/* 1=multiple excel file for each Iteration, 2=one excel file*/
-%let output				= C:\Users\Lenovo\Downloads\fwdproject\test\				
-										;	/* save output report in this location as C:\Users\Lenovo\ */
+%let varlist 			= &woe_var_list.
+											;	/* List of model variable */
+
+%let info_val_data		= overall			;	/* Information value data */
+%let infoval_data_path	= C:\Users\1567478\Desktop\TW_COL_1\data\				
+											;	/* Provide the path of info val dataset generated by auto biining*/
+%let Excel				= 1					;	/* 1=multiple excel file for each Iteration, 2=one excel file*/
+%let output				= C:\Users\1567478\Desktop\TW_COL_1\data\				
+											;	/* save output report in this location as C:\Users\Lenovo\ */;
+
 /***************************************************************************************************************/
+
+/*proc printto log="C:\Users\1567478\Desktop\TW_COL_1\data\Logistic_model.txt";*/
+
 %Logistic_model();
+
+/*proc printto;run;*/
+
 /***************************************************************************************************************/
 /*******END OF MACRO *******************************************************************************************/
 /***************************************************************************************************************/
+
+/**/
+/**/
+/*%let output = C:\Users\Lenovo\Downloads\fwdproject\test\;*/
+/*libname local  "&output.";*/
+
+
+/*data   Ttd_dev;*/
+/*set    local.Ttd_dev;*/
+/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\32_MB_Num_woe_code_var_missing.sas";*/
+/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\02_MB_Num_woe_varlist_var_missing.sas";*/
+/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\31_MB_Num_woe_code_Nomissing.sas";*/
+/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\01_MB_Num_woe_varlist_Nomissing.sas";*/
+/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\52_MB_Num_CA_code_var_missing.sas";*/
+/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\62_MB_Num_CA_Varlist_var_missing.sas";*/
+/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\51_MB_Num_CA_code_Nomissing.sas";*/
+/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\61_MB_Num_CA_Varlist_Nomissing.sas";*/
+/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\35_MB_Char_woe_code_Nomissing.sas";*/
+/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\05_MB_Char_woe_varlist_Nomissing.sas";*/
+/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\55_MB_Char_CA_code_Nomissing.sas";*/
+/*%include   "C:\Users\Lenovo\Downloads\fwdproject\test\65_MB_Char_CA_Varlist_Nomissing.sas";*/
+/*       */
+/* Keep  GBI_TAG wgt */
+/*   &NUM_woe_Num_var_missing.           */
+/*   &NUM_woe_Num_nonmissing.            */
+/*   &NUM_CA_Num_var_missing.            */
+/*   &NUM_CA_Num_nonmissing.             */
+/*   &Char_woe_Char_nonmissing.          */
+/*   &Char_CA_Char_nonmissing.           */
+/*                                       ;   */
+/*                                           */
+/*RUN    ;*/
+
+
+%let woe_var_list = 
+AP_IVPR_PLPAY_OST_6MW
+CT_KP_KPS_1MW
+CT_OPS_ACT_CD_LS_1MW
+MAX_PL_AFEE_1MW
+TM_SN_LST_PLPAYW
+TM_SN_LS_OPS_ACT_CD_RVW
+TM_SN_LS_OPS_RPCW
+CB_BUR_REFIN_CODE_ML_6MW
+CB_PL_DLQ_XDAYS_3MW
+CT_OPS_RPC_1MW
+TM_SN_LST_KP_DATEW
+TM_SN_LST_KP_PTPST_ETYW
+AP_IVPR_NRPC_TOT_1MW
+AP_IVPR_PLINT_OST_1MW
+AVG_INV_DELQ_AMT_X_3MW
+CT_OPS_NRPC_IC_3MW
+CT_OPS_TXN_HARD_6MW
+MAX_BUR_CO_ACC_L6MW
+MAX_BUR_USEC_ACC_L1MW
+MAX_BUR_UTIL_DUAL_CD_1MW
+TM_SN_LST_BP_PTPST_NCONW
+TM_SN_LS_OPS_PTY_AW
+AP_IVPR_RPC_TOT_1MW
+AVG_INV_DELQ_AMT_60_3MW
+CT_PLPAY_TXN_3MW
+CT_OPS_ACT_CD_RV_6MW
+CT_OPS_TXN_HARD_1MW
+MAX_PL_AINT_1MW
+TM_SN_LS_OPS_NRPCW
+
+
+
+
+;
+
+
+/*proc logistic data=dev DESCENDING	namelen=32	;*/
+/*			model ab_ivpr_bad_pl = &woe_var_list. /selection=stepwise sls=0.01 sle=0.01 ;*/
+/*			Weight wgt;*/
+/*		run;*/
+
+
+
+/*options nocenter macrogen  MFILE symbolgen   mprint  mlogic  merror serror ls=144 ps=77 source2;*/
+
+
+proc logistic data=dev;
+ 		model ab_ivpr_bad_pl=
+
+AP_IVPR_PLPAY_OST_6MW
+CB_BUR_REFIN_CODE_ML_6MW
+CB_PL_DLQ_XDAYS_3MW
+CT_OPS_ACT_CD_LS_1MW
+MAX_PL_AFEE_1MW
+TM_SN_LST_KP_DATEW
+TM_SN_LST_KP_PTPST_ETYW
+
+
+
+				 ;
+ 		CODE file = 'C:\Users\1567478\Desktop\TW_COL_1\data\pprob.sas';	/* File pprob.sas saved in "C:\Users\1567478\pprob.sas" */
+	run;
+
+data VAL1;
+   set VAL;
+   %include 'C:\Users\1567478\Desktop\TW_COL_1\data\pprob.sas';
+run;
+
+data dev1;
+   set dev;
+   %include 'C:\Users\1567478\Desktop\TW_COL_1\data\pprob.sas';
+run;
+
+
+/**/
+/**/
+/*proc freq data=VAL1 noprint;*/
+/*	tables P_ab_ivpr_bad_pl1*ab_ivpr_bad_pl  / measures;*/
+/*	output out=somersd(keep=_SMDRC_)	 smdrc;*/
+/*	run;*/
+/**/
+/*Title "Somers' D R|C";*/
+/*proc print data = somersd; run;*/
+;
+
+
+%Macro risk_ranking_lift_table(input, bad_flag, score, total_bins );
+	proc rank data 	= &input. group=&total_bins.
+			out 	= &input._1(keep = &bad_flag. &score. rank_var);
+			var 	&score. ;
+	    	ranks 	rank_var ;
+		run ;
+
+	proc transreg data = &input._1  noprint;
+	      model 	identity(&bad_flag.) = monotone(rank_var) / additive ;
+	      output	out	=	&input._2 dap ;
+	      id 		&score. ;
+	    run ;
+
+	proc sql; 
+		create table &input._3 (drop=Trank_var) as 
+			select 	Trank_var, 
+					min(&score.) 				as min_score, 
+					max(&score.) 				as max_score, 
+					count(*) 					as Total,
+					sum(case when &bad_flag. = 0 then 1 else 0 end) as Good,
+					sum(&bad_flag.) 			as Bad,
+					sum(&bad_flag.)/count(*)  	as Bad_Rate
+			from &input._2 
+			group by 1;
+			quit;
+
+
+	/*
+		proc freq data = &input._2 noprint;
+			tables Trank_var*&bad_flag. /missing norow nocol nopercent nocum out=&input._3;
+		run;
+
+		proc transpose data=&input._3 out=&input._4 (drop= _NAME_ _LABEL_ Rename =(_0 = Good _1 = Bad));
+		    by Trank_var 		;
+		    id &bad_flag.	;
+		    var COUNT			;
+		run;
+
+		data &input._4;
+			set &input._4;			
+				Total = Good + Bad;
+				lag_scr=lag(Trank_var);
+				if _n_ = 1 then lag_scr = 0;
+				rename Trank_var = score;
+			run;
+	*/
+	Title "Lift Tables";
+	proc print data = &input._3  ; run;
+
+	proc delete data = &input._1 &input._2 &input._3; run;
+	Title "";
+
+%Mend risk_ranking_lift_table;
+
+%risk_ranking_lift_table(input=dev1, bad_flag=ab_ivpr_bad_pl, score=P_ab_ivpr_bad_pl1, total_bins=10 );

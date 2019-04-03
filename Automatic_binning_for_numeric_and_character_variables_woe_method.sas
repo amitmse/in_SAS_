@@ -1601,13 +1601,92 @@ filename DA	"&output.generate_sas_dataset_by_using_WOE_and_CA_code_from_autobinn
 %MEND WOE ;
 /**********************************************************************************************/
 /**********************************************************************************************/
+/* Test data */
+/*libname local  'C:\Users\Lenovo\Downloads\fwdproject\test';*/
+
 options mprint mlogic symbolgen;
 
 %let output = C:\Users\Lenovo\Downloads\fwdproject\test\;
 
+/*%let output = E:\AMIT\TVS\;*/
 libname local  "&output.";
 
-%let keep_var =	 ;
+%let keep_var =	 
+ADVEMI
+ AMOUNT_FINANACED
+ APPLICANT_AGE
+ APPLICANT_TYPE
+ APPLICATION_STATUS
+ AREA
+ BANK_ACCOUNT_STATUS
+ BRANCH_CODE
+ BRANCH_NAME
+ CHANNEL
+ CITY
+ CO_BORROWER
+ CREDIT_SHIELD
+ CUSTOMER_CATEGORY
+ DEALER_CATEGORY
+ DEALER_TYPE
+ DEVIATION_LEVEL
+ DEVIATIONFLAG
+ DISTANCE_DEALER_CUSTOMER
+ EMI
+ EMPLOYMENT_TYPE
+ GENDER
+ GEO_LIMIT_APP
+ GROSS_SAL
+ GUARANTOR
+ INSURANCE_TYPE
+ INVOICE_VALUE
+ LTV
+ MAIN_DLR_CODE
+ NEGATIVE_AREA_FLAG
+ NET_SAL
+ NO_OF_DEPENDENCE
+ NO_OF_YEAR
+ OTHER_CHARGES
+ PAYMENTTYPE
+ PDD_INSURANCE_STATUS
+ PDD_INVOICE_STATUS
+ PDD_RC_STATUS
+ PROCESSING_FEES
+ PROD_CODE
+ PRODUCT_NAME
+ PRODUCT_TYPE
+ PRODUCTGROUP
+ Prof_Grp
+ PROFILE
+ PROGRAM_DOCUMENT
+ PROGRAM_NAME
+ QUALIFICATION
+ RATE_OF_INTEREST
+ RESIDENCE_STATUS
+ RESIDENCE_TYPE
+ SOURCE_CODE
+ STANDARD_OF_LIVING
+ STATE
+ TENURE
+ TVR_FLAG
+ TVR_STATUS
+  ZONE
+
+ MODEL
+ PINCODE
+
+/* GBI_Tag*/
+/*  wgt*/
+
+;
+/*ods html body = 'cont.xls';*/
+/*proc contents data = local.ttd_dev; run;*/
+/*ods html close;*/
+
+data dev;
+set local.Ttd_dev;
+	wgt=1;
+	keep GBI_TAG wgt &keep_var.;
+run;
 
 /********************************************************************************/
 /* Call Macro */	

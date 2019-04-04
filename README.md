@@ -1,6 +1,7 @@
 # SAS macro for Logistic (Scorecard) Model Development
 
 1. Exploratory Data Analysis (EDA) : 
+      
       https://github.com/amitmse/in_SAS_/blob/master/EDA.sas
 
 2. Information Value :    

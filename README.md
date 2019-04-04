@@ -1,4 +1,4 @@
-# SAS Macros for scorecard development
+# SAS macro for Scorecard Development
 
 1. Exploratory Data Analysis (EDA) : https://github.com/amitmse/in_SAS_/blob/master/EDA.sas
 

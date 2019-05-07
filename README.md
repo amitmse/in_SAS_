@@ -32,6 +32,8 @@
       https://github.com/amitmse/in_SAS_/blob/master/KS_Macro_with_Weight.sas
 
       https://github.com/amitmse/in_SAS_/blob/master/Lift_Table%20-%20Transreg.sas
+      
+      https://github.com/amitmse/in_SAS_/blob/master/GINI.sas
 
       https://github.com/amitmse/in_SAS_/blob/master/GINI.xlsx
 

@@ -1,6 +1,6 @@
 
 
-/************KS Macro*******************************************************************/;
+/************GINI at score point level *******************************************************************/;
 %macro GINI_CALCULATION();
 
 	data &input_data._1;
@@ -85,15 +85,26 @@ data dev;
 
 /***********************************************************************************************************************/
 
-%let input_data     = dev			; 		/* name of score data data */
-%let depdended_var  = cb_achl_bad	;  		/* write name of dependent variable.  (bad=0/1) */
-%let good           = good 			;  		/* mention depdended_var=1 refer to good or bad */
-%let bad            = bad			;    	/* mention depdended_var=0 refer to good or bad */
-%let score			= final_score 	; 		/* model_score non_model_score */
-%let weight 		= wgt			;		/* Weight variable. If no weight then give 1 */
+%let input_data     = dev		; 	/* name of score data data */
+%let depdended_var  = cb_achl_bad	;  	/* write name of dependent variable.  (bad=0/1) */
+%let good           = good 		;  	/* mention depdended_var=1 refer to good or bad */
+%let bad            = bad		;    	/* mention depdended_var=0 refer to good or bad */
+%let score	    = final_score 	; 	/* model_score non_model_score */
+%let weight 	    = wgt		;	/* Weight variable. If no weight then give 1 */
 
 /***********************************************************************************************************************/
 
-%GINI_CALCULATION()	; 						/* AR calculation */
+%GINI_CALCULATION()			; 	/* AR/GINI calculation */
 
 /***********************************************************************************************************************/
+
+
+
+proc freq data=out.final_score_bad noprint;
+      tables pa*cb_achl_bad       / measures;	/*pa : probability*/
+      output out=somersd(keep=_SMDRC_)    smdrc;
+	  where segment='Current';
+      run;
+
+Title "Somers' D R|C";
+proc print data = somersd; run;

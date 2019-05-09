@@ -27,7 +27,7 @@
 
 5. Lift Table (KS & GINI):
 
-      https://github.com/amitmse/in_SAS_/blob/master/Lift_Table.sas
+      https://github.com/amitmse/in_SAS_/blob/master/Lift_Table_v1.sas
 
       https://github.com/amitmse/in_SAS_/blob/master/KS_Macro_with_Weight.sas
 

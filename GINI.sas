@@ -1,6 +1,6 @@
 
 
-/************GINI at score point level *******************************************************************/;
+/************KS Macro*******************************************************************/;
 %macro GINI_CALCULATION();
 
 	data &input_data._1;
@@ -85,26 +85,72 @@ data dev;
 
 /***********************************************************************************************************************/
 
-%let input_data     = dev		; 	/* name of score data data */
-%let depdended_var  = cb_achl_bad	;  	/* write name of dependent variable.  (bad=0/1) */
-%let good           = good 		;  	/* mention depdended_var=1 refer to good or bad */
-%let bad            = bad		;    	/* mention depdended_var=0 refer to good or bad */
-%let score	    = final_score 	; 	/* model_score non_model_score */
-%let weight 	    = wgt		;	/* Weight variable. If no weight then give 1 */
+%let input_data     = dev			; 		/* name of score data data */
+%let depdended_var  = cb_achl_bad	;  		/* write name of dependent variable.  (bad=0/1) */
+%let good           = good 			;  		/* mention depdended_var=1 refer to good or bad */
+%let bad            = bad			;    	/* mention depdended_var=0 refer to good or bad */
+%let score			= final_score 	; 		/* model_score non_model_score */
+%let weight 		= wgt			;		/* Weight variable. If no weight then give 1 */
 
 /***********************************************************************************************************************/
 
-%GINI_CALCULATION()			; 	/* AR/GINI calculation */
+%GINI_CALCULATION()	; 						/* AR calculation */
 
 /***********************************************************************************************************************/
 
+/*Concordance method */
+data test;
+		set Old_New_Score_Bad;
+		where segment = 'Current' and ci_samp_flag = 'OOT-Dec16';
+		keep cb_achl_bad Score_New;
+		run;
 
+/*proc means data = test n NMISS;run;*/
+/**/
+/*%Macro Concordant();*/
+/*		data good(keep=good_score) bad(keep=bad_score);*/
+/*			set &Input.;*/
+/*				if &Bad_Variable. = 1 then bad_score  = &score_Variable.; */
+/*				if &Bad_Variable. = 0 then good_score = &score_Variable.; */
+/**/
+/*				if &Bad_Variable. = 1 then output bad;*/
+/*				if &Bad_Variable. = 0 then output good;*/
+/**/
+/*			run;*/
+/**/
+/*		proc sql; create table CART_0 as select a.*, b.* from good as a ,bad as b; quit;*/
+/**/
+/*		data CART_0;*/
+/*			set CART_0;*/
+/*				length hit $32;*/
+/*				if good_score > bad_score then hit = 'Concordant';else*/
+/*				if good_score < bad_score then hit = 'Discordant';else*/
+/*				if good_score = bad_score then hit = 'tied';*/
+/*			run;*/
+/**/
+/*		proc freq data = CART_0 noprint;*/
+/*			tables  hit    /out=cart_1;*/
+/*			run;*/
+/**/
+/*		proc transpose data=cart_1 out=cart_2 (drop=_LABEL_ _NAME_ ); var PERCENT; id hit; run;*/
+/**/
+/*		data cart;*/
+/*			set cart_2;*/
+/*				FORMAT SOMERS_D PERCENT7.2;*/
+/*				AUC 		=   (Concordant/100) + (0.5*(Tied/100)) 		;*/
+/*				SOMERS_D 	=2*((Concordant/100) + (0.5*(Tied/100))) - 1	;*/
+/*			run;*/
+/**/
+/*		proc delete data = good bad CART_0 cart_1 cart_2;run;*/
+/**/
+/*		proc print data=cart;*/
+/*			var SOMERS_D;*/
+/*					run;*/
+/*%Mend;*/
+		*/
 
-proc freq data=out.final_score_bad noprint;
-      tables pa*cb_achl_bad       / measures;	/*pa : probability*/
-      output out=somersd(keep=_SMDRC_)    smdrc;
-	  where segment='Current';
-      run;
+		%let Input 			= test 			;	/*input data*/
+		%let Bad_Variable	= cb_achl_bad	;	/*Bad Variable Name */
+		%let score_Variable	= Score_New		;	/*Score variable name. High score refer to Good customer. if otherwise then update the first part of code */
 
-Title "Somers' D R|C";
-proc print data = somersd; run;
+/*		%Concordant();*/

@@ -3,6 +3,7 @@
 1. Exploratory Data Analysis (EDA) : 
       
       https://github.com/amitmse/in_SAS_/blob/master/EDA.sas
+      https://github.com/amitmse/in_SAS_/blob/master/Create%20Historical%20and%20Performance%20Variables.sas
 
 2. Information Value :    
 

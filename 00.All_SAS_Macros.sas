@@ -1132,3 +1132,12 @@ proc freq data=dev1 noprint;
 
 Title "Somers' D R|C";
 proc print data = somersd; run;
+
+
+
+/*Transpose*/
+	proc transpose data=long1 out=wide1 prefix=faminc;
+	    by famid ; 	    
+	    var faminc;
+	    id year; /*Var name*/ 
+	run;

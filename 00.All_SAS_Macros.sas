@@ -10,6 +10,7 @@ run;
 quit;
 /**************************************************************/
 
+%put &sqlobs.;
 
 %macro distinct_count(Numvar);
 	%do i = 1 %to &Numvar. ; 

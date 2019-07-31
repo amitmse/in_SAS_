@@ -73,6 +73,10 @@
       https://github.com/amitmse/in_SAS_/blob/master/PDO_Calculation.sas
 
       https://github.com/amitmse/in_SAS_/blob/master/Scale_Score_by_PDO.sas
+      
+      https://github.com/amitmse/in_SAS_/blob/master/Point%20Score%20by%20PDO%20Method.xlsx
+      
+      https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO.sas
 
 13. Profile Analysis:
 

@@ -68,7 +68,7 @@
 
       https://github.com/amitmse/in_SAS_/blob/master/Point%20Score%20by%20PDO%20Method.xlsx
       
-      https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO.sas
+      https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO_Method.sas
       
       https://github.com/amitmse/in_SAS_/blob/master/PDO%20Score.xlsx
 

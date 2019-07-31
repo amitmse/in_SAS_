@@ -66,6 +66,10 @@
 
 12. Score scale by PDO
 
+      https://github.com/amitmse/in_SAS_/blob/master/Point%20Score%20by%20PDO%20Method.xlsx
+      
+      https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO.sas
+      
       https://github.com/amitmse/in_SAS_/blob/master/PDO%20Score.xlsx
 
       https://github.com/amitmse/in_SAS_/blob/master/PDO.sas
@@ -74,10 +78,6 @@
 
       https://github.com/amitmse/in_SAS_/blob/master/Scale_Score_by_PDO.sas
       
-      https://github.com/amitmse/in_SAS_/blob/master/Point%20Score%20by%20PDO%20Method.xlsx
-      
-      https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO.sas
-
 13. Profile Analysis:
 
       https://github.com/amitmse/in_SAS_/blob/master/Profile_Analysis.sas

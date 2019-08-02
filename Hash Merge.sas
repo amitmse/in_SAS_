@@ -3,15 +3,16 @@
 data sales_cal_weath (drop = date DT);
 	/*https://www.lexjansen.com/nesug/nesug07/bb/bb16.pdf*/
 
-		if 0 then set lib1.sales; /* "if 0 then set" is a short-cut way to specify the length of all variables
+		if 0 then set lib1.sales lib1.calendar; /* "if 0 then set" is a short-cut way to specify the length of all variables
 									rather than listing them individually in LENGTH or ATTRIB statements*/
 
 		if _N_ = 1 then do;	/*Hash tables only need to be loaded once*/
-			length Day_of_week 2 Holiday_indicator $8;
+			/*length Day_of_week 2 Holiday_indicator $8;*/
 			declare hash cal(dataset:'lib1.calendar'); 	/*data "lib1.calendar" alias as "cal" and dump in hash*/
 
 				cal.defineKey('Date');/* Merge key from "cal". Hash requires unique keys. Consequently, data is 
-					automatically de-duped when loaded into a hash object (no warnings or errors). */
+					automatically de-duped when loaded into a hash object (no warnings or errors). 
+					For Multiple Key -> weather.definekey('zone', 'dt');*/
 
 				/*List of var to be included in final merge table.To include all variables cal.defineData(all:'YES')*/
 				cal.defineData('Day_of_week', 'Holiday_indicator'); 
@@ -28,6 +29,7 @@ data sales_cal_weath (drop = date DT);
 							same as above Call Missing(Day_of_week,Holiday_indicator);			end; 
 			Multiple Key: Cal.find(key:sales_date, key:sales_hour);
 							if key name same in the both table. cal.find()=0 then output;
+			For Multiple Key -> weather.find(key:zone, key:weather_scenario);
 			*/
 	run;
 
@@ -392,8 +394,8 @@ data work.hash_merge (drop=rc i);
 	 declare hash h_small ();/* Define it */
 		 length keyvar smallvar1-smallvar20 8;
 		 array smallvar(20);
-		 rc = h_small.DefineKey(“keyvar” );
-		 rc = h_small.DefineData(“smallvar1”,”smallvar2”,”smallvar3”,”smallvar4”,“smallvar17”,”smallvar18”);
+		 rc = h_small.DefineKey(Â“keyvarÂ” );
+		 rc = h_small.DefineData(Â“smallvar1Â”,Â”smallvar2Â”,Â”smallvar3Â”,Â”smallvar4Â”,Â“smallvar17Â”,Â”smallvar18Â”);
 		 rc = h_small.DefineDone ();
 	 /* Fill it */
 	 do until ( eof_small );

@@ -1,5 +1,5 @@
 
-options nocenter macrogen  MFILE symbolgen   mprint  mlogic  merror serror ls=144 ps=77;
+options nocenter macrogen  MFILE symbolgen   mprint  mlogic  merror serror ls=144 ps=77 COMPRESS=YES;
 
 /*Change SAS work directory:*/
 	https://stackoverflow.com/questions/43429208/change-temporary-file-directory-in-sas
@@ -7,9 +7,13 @@ options nocenter macrogen  MFILE symbolgen   mprint  mlogic  merror serror ls=14
 	data zipcode;
 		set sashelp.zipcode;
 		run;
-
-
-
+		
+/* Check available memory */
+data _null_;
+    		mem = input(getoption('xmrlmem'),20.2)/10e6;
+    		format mem 20.2;
+    		put "You have " mem "GB memory available";
+	run;
 
 /**************************************************************/
 /* get list of data from lib*/

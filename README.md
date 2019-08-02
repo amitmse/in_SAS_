@@ -4,23 +4,20 @@
       
       https://github.com/amitmse/in_SAS_/blob/master/EDA.sas
       https://github.com/amitmse/in_SAS_/blob/master/Create%20Historical%20and%20Performance%20Variables.sas
-
+      https://github.com/amitmse/in_SAS_/blob/master/Merge.xlsx
+      https://github.com/amitmse/in_SAS_/blob/master/Hash%20Merge.sas
+    
 2. Information Value :    
 
       https://github.com/amitmse/in_SAS_/blob/master/Raw_Information_Value.sas
-
       https://github.com/amitmse/in_SAS_/blob/master/Raw_information_value_LP.sas
-
       https://github.com/amitmse/in_SAS_/blob/master/Information_value_with_Weight.sas
-
       https://github.com/amitmse/in_SAS_/blob/master/Information_value_Raw_and_Monotonic_binning.sas
 
 3. Variable Binning (WoE monotonic) :
 
       https://github.com/amitmse/in_SAS_/blob/master/Automatic_binning_for_numeric_and_character_variables_woe_method.sas
-
       https://github.com/amitmse/in_SAS_/blob/master/Woe_calculation_Macro.sas
-
 
 4. Logistic Model :
 
@@ -29,13 +26,9 @@
 5. Lift Table (KS & GINI):
 
       https://github.com/amitmse/in_SAS_/blob/master/Lift_Table_v1.sas
-
       https://github.com/amitmse/in_SAS_/blob/master/KS_Macro_with_Weight.sas
-
       https://github.com/amitmse/in_SAS_/blob/master/Lift_Table%20-%20Transreg.sas
-      
       https://github.com/amitmse/in_SAS_/blob/master/GINI.sas
-
       https://github.com/amitmse/in_SAS_/blob/master/GINI.xlsx
 
 6. Marginal KS:
@@ -45,7 +38,6 @@
 7. Characteristic Analysis Macro:
 
       https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro.sas
-
       https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro_LP.sas
 
 8. Cluster Analysis : 
@@ -67,15 +59,10 @@
 12. Score scale by PDO
 
       https://github.com/amitmse/in_SAS_/blob/master/Point%20Score%20by%20PDO%20Method.xlsx
-      
       https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO_Method.sas
-      
       https://github.com/amitmse/in_SAS_/blob/master/PDO%20Score.xlsx
-
       https://github.com/amitmse/in_SAS_/blob/master/PDO.sas
-
       https://github.com/amitmse/in_SAS_/blob/master/PDO_Calculation.sas
-
       https://github.com/amitmse/in_SAS_/blob/master/Scale_Score_by_PDO.sas
       
 13. Profile Analysis:

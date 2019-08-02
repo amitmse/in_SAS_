@@ -1,6 +1,16 @@
 
 options nocenter macrogen  MFILE symbolgen   mprint  mlogic  merror serror ls=144 ps=77;
 
+/*Change SAS work directory:*/
+	https://stackoverflow.com/questions/43429208/change-temporary-file-directory-in-sas
+	libname user 'C:\Users\1567478\MyData\SAS';
+	data zipcode;
+		set sashelp.zipcode;
+		run;
+
+
+
+
 /**************************************************************/
 /* get list of data from lib*/
 libname a '\\inwpipfps21\wkgrps\Data_Landing_Area\SG\Bankruptcy Projection Model';

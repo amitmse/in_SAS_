@@ -17,6 +17,7 @@
 3. Variable Binning (WoE monotonic) :
 
       https://github.com/amitmse/in_SAS_/blob/master/Automatic_binning_for_numeric_and_character_variables_woe_method.sas
+      
       https://github.com/amitmse/in_SAS_/blob/master/Woe_calculation_Macro.sas
 
 4. Logistic Model :

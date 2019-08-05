@@ -1,3 +1,19 @@
+Exclusion:
+	- Bad at Obs / DRP in obs / Missing Performance
+	- Fraud, Lost, Stolen, Closed & Deceased (Obs, Perf)
+	- Staff Customers / VIP Customers / Test customers / Corporate customers
+	- Secured / Government Guaranteed
+	- Inactive
+	- MoB < 6 months
+	- Age < 18 years
+	- No Bureau / Ever bureau off-us charge off
+	- Blacklisted Customers
+	- Policy Exclusions
+	- Card Fee / Low Balance Charge offs (LBCO<=5000) / Low Balance
+	- Pre-Approved Cards / Top-Up
+	- Not Booked
+	- Observation & performance period overlap for the customers having multiple cards
+
 
 options nocenter macrogen  MFILE symbolgen   mprint  mlogic  merror serror ls=144 ps=77 COMPRESS=YES;
 

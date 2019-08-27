@@ -99,58 +99,66 @@ data dev;
 /***********************************************************************************************************************/
 
 /*Concordance method */
-data test;
-		set Old_New_Score_Bad;
-		where segment = 'Current' and ci_samp_flag = 'OOT-Dec16';
-		keep cb_achl_bad Score_New;
+/*
+%Macro Concordant();
+		data good(keep=good_score) bad(keep=bad_score);
+			set &Input.;
+				if &Bad_Variable. = 1 then bad_score  = &score_Variable.; 
+				if &Bad_Variable. = 0 then good_score = &score_Variable.;
+				if &Bad_Variable. = 1 then output bad;
+				if &Bad_Variable. = 0 then output good;
 		run;
 
-/*proc means data = test n NMISS;run;*/
-/**/
-/*%Macro Concordant();*/
-/*		data good(keep=good_score) bad(keep=bad_score);*/
-/*			set &Input.;*/
-/*				if &Bad_Variable. = 1 then bad_score  = &score_Variable.; */
-/*				if &Bad_Variable. = 0 then good_score = &score_Variable.; */
-/**/
-/*				if &Bad_Variable. = 1 then output bad;*/
-/*				if &Bad_Variable. = 0 then output good;*/
-/**/
-/*			run;*/
-/**/
-/*		proc sql; create table CART_0 as select a.*, b.* from good as a ,bad as b; quit;*/
-/**/
-/*		data CART_0;*/
-/*			set CART_0;*/
-/*				length hit $32;*/
-/*				if good_score > bad_score then hit = 'Concordant';else*/
-/*				if good_score < bad_score then hit = 'Discordant';else*/
-/*				if good_score = bad_score then hit = 'tied';*/
-/*			run;*/
-/**/
-/*		proc freq data = CART_0 noprint;*/
-/*			tables  hit    /out=cart_1;*/
-/*			run;*/
-/**/
-/*		proc transpose data=cart_1 out=cart_2 (drop=_LABEL_ _NAME_ ); var PERCENT; id hit; run;*/
-/**/
-/*		data cart;*/
-/*			set cart_2;*/
-/*				FORMAT SOMERS_D PERCENT7.2;*/
-/*				AUC 		=   (Concordant/100) + (0.5*(Tied/100)) 		;*/
-/*				SOMERS_D 	=2*((Concordant/100) + (0.5*(Tied/100))) - 1	;*/
-/*			run;*/
-/**/
-/*		proc delete data = good bad CART_0 cart_1 cart_2;run;*/
-/**/
-/*		proc print data=cart;*/
-/*			var SOMERS_D;*/
-/*					run;*/
-/*%Mend;*/
-		*/
+		proc sql; create table CART_0 as select a.*, b.* from good as a ,bad as b; quit;
 
-		%let Input 			= test 			;	/*input data*/
-		%let Bad_Variable	= cb_achl_bad	;	/*Bad Variable Name */
-		%let score_Variable	= Score_New		;	/*Score variable name. High score refer to Good customer. if otherwise then update the first part of code */
+		data CART_0;
+			set CART_0;
+				length hit $32;
+				if good_score > bad_score then hit = 'Concordant';else
+				if good_score < bad_score then hit = 'Discordant';else
+				if good_score = bad_score then hit = 'tied';
+			run;
 
-/*		%Concordant();*/
+		proc freq data = CART_0 noprint;
+			tables  hit    /out=cart_1;
+			run;
+
+		proc transpose data=cart_1 out=cart_2 (drop=_LABEL_ _NAME_ ); var PERCENT; id hit; run;
+
+		data cart;
+			set cart_2;
+				FORMAT SOMERS_D PERCENT7.2;
+				AUC 		=   (Concordant/100) + (0.5*(Tied/100)) 	;
+				SOMERS_D 	=2*((Concordant/100) + (0.5*(Tied/100))) - 1	;
+			run;
+
+		proc delete data = good bad CART_0 cart_1 cart_2;run;
+
+		proc print data=cart;
+			var SOMERS_D;
+			run;
+%Mend;
+*/
+%let Input 		= test 		; /*input data*/
+%let Bad_Variable	= cb_achl_bad	; /*Bad Variable Name */
+%let score_Variable	= Score_New	; /*Score variable name. High score refer to Good customer. 
+					 	if otherwise then update the first part of code */
+%Concordant();
+
+/******************************************************************************************/
+%macro concdisc(data=, event=, nonevent=, response=);
+    %global n;
+    proc sql;reset noprint;
+					select count(*) into :N from &data.;	/* number of observations in original data set into macro variable N */
+        create table _nonevents as 	select pbin as pbin0 	from &data. where &response=&nonevent; /* create data set of nonevents */
+        create table _events 	as 	select pbin as pbin1 	from &data. where &response=&event; /* create data set of events */
+	/* create data set of all event-nonevent pairs and determine concordance */
+	create table _pairs 	as 	select *, (pbin1>pbin0) as Concordant,(pbin1=pbin0) as Tied,(pbin0>pbin1) as Discordant 
+								from _nonevents, _events;
+	quit;
+%mend;
+
+/*%concdisc(data=out, event=1, nonevent=0, response=outcome);*/
+
+
+

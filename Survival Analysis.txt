@@ -1,1 +1,5 @@
 https://stats.idre.ucla.edu/sas/seminars/sas-survival/
+https://towardsdatascience.com/survival-analysis-part-a-70213df21c2e
+https://www.statisticshowto.datasciencecentral.com/survival-analysis/
+https://en.wikipedia.org/wiki/Survival_analysis
+http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Survival/BS704_Survival_print.html

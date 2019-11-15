@@ -8,3 +8,9 @@ Quick Access Bar \
 Tell me what you want to do \
 
 https://www.youtube.com/watch?v=9RNEtxAURAM
+
+https://www.presentation-process.com/ \
+
+https://www.presentation-process.com/membership-link-to-training-and-resources.html \
+  Password: fi8O7Vu33H  \
+

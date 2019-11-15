@@ -1,6 +1,6 @@
 
-CTRL + SHIFT 		= Copy with aligned
-CTRL + D			= Smart Copy
+CTRL + SHIFT 		= Copy with aligned \n
+CTRL + D			  = Smart Copy
 CTRL + TAB			= Switch between PPT
 Aspect Ratio		= 4:3 or 16:9
 Lock Drawing	

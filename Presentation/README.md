@@ -11,6 +11,7 @@ https://www.youtube.com/watch?v=9RNEtxAURAM
 
 https://www.presentation-process.com/ 
 
-https://www.presentation-process.com/membership-link-to-training-and-resources.html 
+https://www.presentation-process.com/membership-link-to-training-and-resources.html
+
   Password: fi8O7Vu33H  
 

@@ -15,3 +15,6 @@ https://www.presentation-process.com/membership-link-to-training-and-resources.h
 
   Password: fi8O7Vu33H  
 
+https://thelogocompany.net/blog/infographics/psychology-color-logo-design/
+
+

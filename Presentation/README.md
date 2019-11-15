@@ -10,8 +10,8 @@ Quick Access Bar \
 Tell me what you want to do \
 
 # Normal Curve: 
-Draw Trinagle (6 length by 2 hight - square box)
-Draw straight line (second line touchs triangle)
+Draw Trinagle (6 length by 2 hight - square box) \
+Draw straight line (second line touchs triangle) \
 Use Edit Shape: Click on Top point and choose "smooth point". Next click on both corner one by one and draw diagonal line to end of second box.
 
 https://www.youtube.com/watch?v=9RNEtxAURAM

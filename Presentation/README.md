@@ -33,3 +33,5 @@ https://thelogocompany.net/blog/infographics/psychology-color-logo-design/
 https://www.colourlovers.com/
 
 https://color.adobe.com/create
+
+https://www.youtube.com/watch?v=_2LLXnUdUIc

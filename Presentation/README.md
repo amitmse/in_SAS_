@@ -30,8 +30,12 @@ Pick color from company logo \
 
 https://thelogocompany.net/blog/infographics/psychology-color-logo-design/
 
+https://coolors.co/browser/latest/1
+
 https://www.colourlovers.com/
 
 https://color.adobe.com/create
 
 https://www.youtube.com/watch?v=_2LLXnUdUIc
+
+https://colorhunt.co/

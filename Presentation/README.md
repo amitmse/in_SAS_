@@ -39,3 +39,16 @@ https://color.adobe.com/create
 https://www.youtube.com/watch?v=_2LLXnUdUIc
 
 https://colorhunt.co/
+
+https://www.templatemonster.com/blog/color-combinations-powerpoint-presentations/amp/
+
+https://www.slideteam.net/blog/9-beautiful-color-palettes-for-designing-powerful-powerpoint-slides/
+
+https://slidemodel.com/choose-color-scheme-powerpoint-presentation/
+
+
+https://youtu.be/8YxmhkaZmCw
+
+https://youtu.be/05OW0Ce8rT8
+
+https://www.livemint.com/money/personal-finance/you-can-get-instant-e-pan-here-is-how-11572940474229.html

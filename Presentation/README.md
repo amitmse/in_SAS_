@@ -1,17 +1,23 @@
-# ------------- Shotcut ---------------------------------
+# ------------- Shortcuts ---------------------------------
 CTRL + SHIFT 		  = Copy with aligned (or reduce the size on one graph ) \
-CTRL + D			    = Smart Copy \
+CTRL + D			    = Smart Copy. Duplicate the selected object or slide \
 CTRL + TAB			  = Switch between PPT \
 CTRL + G          = Group \
 CTRL + SHIFT + G  = Ungroup \
 Ctrl + Y          = Redo an action \
+Ctrl + K          = Insert a hyperlink
+Ctrl + M          = Insert a new slide
+Ctrl + Enter      = inserts a new slide	
+Ctrl + Shift + >  = Increase font size
+Ctrl + Shift + C  = Copy formatting of selected shape
 
-Tab
+# Tab
 
 Alt  + H          = Go to "Home tab"  \
 Alt  + N          = Open "Insert tab" \
+Shift + F6        = Move counterclockwise among panes in Normal view
 
-Paragraph
+# Paragraph
 
 Ctrl + E          = Center a paragraph  \
 Ctrl + J          = Justify a paragraph \
@@ -22,7 +28,8 @@ Alt  + Q          = Tell me what you want to do \
 F7                = Check spelling \
 Ctrl + F1         = Show or hide the ribbon
 Lock Drawing	    = Right Click and lock for multiple use \
-
+B                 = Change the screen to black during a slideshow; press B again to return to the slideshow
+Slide number + Enter  = Go to slide number (During presentation)
 
 # ------------------------------------------------
 Aspect Ratio		= 4:3 or 16:9 \

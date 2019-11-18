@@ -77,3 +77,5 @@ https://youtu.be/8YxmhkaZmCw
 https://youtu.be/05OW0Ce8rT8
 
 https://www.livemint.com/money/personal-finance/you-can-get-instant-e-pan-here-is-how-11572940474229.html
+
+https://visme.co/blog/how-to-choose-a-color-scheme/

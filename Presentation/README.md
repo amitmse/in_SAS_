@@ -1,13 +1,32 @@
+# ------------- Shotcut -----------------------------------------------------------------------------------------
+CTRL + SHIFT 		  = Copy with aligned (or reduce the size on one graph ) \
+CTRL + D			    = Smart Copy \
+CTRL + TAB			  = Switch between PPT \
+CTRL + G          = Group \
+CTRL + SHIFT + G  = Ungroup \
+Ctrl + Y          = Redo an action \
 
-CTRL + SHIFT 		= Copy with aligned (or reduce the size on one graph ) \
-CTRL + D			  = Smart Copy \
-CTRL + TAB			= Switch between PPT \
-CTRL + TAB      = Group
+Tab
 
+Alt  + H          = Go to "Home tab"  \
+Alt  + N          = Open "Insert tab" \
+
+Paragraph
+
+Ctrl + E          = Center a paragraph  \
+Ctrl + J          = Justify a paragraph \
+Ctrl + L          = Left align a paragraph \
+Ctrl + R          = Right align a paragraph \
+
+Alt  + Q          = Tell me what you want to do \
+F7                = Check spelling \
+Ctrl + F1         = Show or hide the ribbon
+Lock Drawing	    = Right Click and lock for multiple use \
+
+
+# ------------------------------------------------------------------------------------------------------
 Aspect Ratio		= 4:3 or 16:9 \
-Lock Drawing	\
 Quick Access Bar \		
-Tell me what you want to do \
 
 # Normal Curve: 
 Draw Trinagle (6 length by 2 hight - square box) \
@@ -22,8 +41,8 @@ https://www.presentation-process.com/membership-link-to-training-and-resources.h
 
   Password: fi8O7Vu33H  
 
+# ------- Color  -----------------------------------------------------------------------------------------------
 
-# Color 
 Choose a Color Theme from Powerpoint \
 Choose a professional color palette \
 Pick color from company logo \
@@ -45,7 +64,6 @@ https://www.templatemonster.com/blog/color-combinations-powerpoint-presentations
 https://www.slideteam.net/blog/9-beautiful-color-palettes-for-designing-powerful-powerpoint-slides/
 
 https://slidemodel.com/choose-color-scheme-powerpoint-presentation/
-
 
 https://youtu.be/8YxmhkaZmCw
 

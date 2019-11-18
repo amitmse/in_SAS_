@@ -1,4 +1,4 @@
-# ------------- Shotcut -----------------------------------------------------------------------------------------
+# ------------- Shotcut ---------------------------------
 CTRL + SHIFT 		  = Copy with aligned (or reduce the size on one graph ) \
 CTRL + D			    = Smart Copy \
 CTRL + TAB			  = Switch between PPT \
@@ -24,7 +24,7 @@ Ctrl + F1         = Show or hide the ribbon
 Lock Drawing	    = Right Click and lock for multiple use \
 
 
-# ------------------------------------------------------------------------------------------------------
+# ------------------------------------------------
 Aspect Ratio		= 4:3 or 16:9 \
 Quick Access Bar \		
 
@@ -41,7 +41,7 @@ https://www.presentation-process.com/membership-link-to-training-and-resources.h
 
   Password: fi8O7Vu33H  
 
-# ------- Color  -----------------------------------------------------------------------------------------------
+# ------- Color  ---------------------------------
 
 Choose a Color Theme from Powerpoint \
 Choose a professional color palette \

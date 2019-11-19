@@ -11,12 +11,12 @@ Ctrl + Enter      = inserts a new slide
 Ctrl + Shift + >  = Increase font size
 Ctrl + Shift + C  = Copy formatting of selected shape
 
-# Tab
+# Tab -------------------
 Alt  + H          = Go to "Home tab"  \
 Alt  + N          = Open "Insert tab" \
 Shift + F6        = Move counterclockwise among panes in Normal view
 
-# Paragraph
+# Paragraph ----------------
 Ctrl + E          = Center a paragraph  \
 Ctrl + J          = Justify a paragraph \
 Ctrl + L          = Left align a paragraph \
@@ -34,7 +34,7 @@ Slide number + Enter  = Go to slide number (During presentation)
 Aspect Ratio		= 4:3 or 16:9 \
 Quick Access Bar \		
 
-# Normal Curve: 
+# Normal Curve: -----------------
 Draw Trinagle (6 length by 2 hight - square box) \
 Draw straight line (second line touchs triangle) \
 Use Edit Shape: Click on Top point and choose "smooth point". Next click on both corner one by one and draw diagonal line to end of second box.
@@ -42,10 +42,6 @@ Use Edit Shape: Click on Top point and choose "smooth point". Next click on both
 https://www.youtube.com/watch?v=9RNEtxAURAM
 
 https://www.presentation-process.com/ 
-
-https://www.presentation-process.com/membership-link-to-training-and-resources.html
-
-  Password: fi8O7Vu33H  
 
 # ------- Color  ---------------------------------
 

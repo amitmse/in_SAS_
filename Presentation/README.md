@@ -12,18 +12,17 @@ Ctrl + Shift + >  = Increase font size
 Ctrl + Shift + C  = Copy formatting of selected shape
 
 # Tab
-
 Alt  + H          = Go to "Home tab"  \
 Alt  + N          = Open "Insert tab" \
 Shift + F6        = Move counterclockwise among panes in Normal view
 
 # Paragraph
-
 Ctrl + E          = Center a paragraph  \
 Ctrl + J          = Justify a paragraph \
 Ctrl + L          = Left align a paragraph \
 Ctrl + R          = Right align a paragraph \
 
+# ---------------------
 Alt  + Q          = Tell me what you want to do \
 F7                = Check spelling \
 Ctrl + F1         = Show or hide the ribbon
@@ -31,7 +30,7 @@ Lock Drawing	    = Right Click and lock for multiple use \
 B                 = Change the screen to black during a slideshow; press B again to return to the slideshow
 Slide number + Enter  = Go to slide number (During presentation)
 
-# ------------------------------------------------
+# --------------------
 Aspect Ratio		= 4:3 or 16:9 \
 Quick Access Bar \		
 

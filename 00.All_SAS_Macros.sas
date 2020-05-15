@@ -1132,7 +1132,7 @@ tables ACCTOPENDATE / out=FreqCount  ;
 run;
 
 
-/************************************************************************/
+/*****Q18*******************************************************************/
 
 options nocenter macrogen  MFILE symbolgen   mprint  mlogic  merror serror ls=144 ps=77 source2;
 proc logistic data=dev descending;

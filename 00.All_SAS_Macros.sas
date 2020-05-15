@@ -1172,3 +1172,13 @@ proc print data = somersd; run;
 	    var faminc;
 	    id year; /*Var name*/ 
 	run;
+
+data person;
+input a $ b $ c $ d $;
+datalines;
+4558 9866 2392 2075
+9154 6813 6676 1145
+0938 5161 6084 7081
+8495 4338 2649 9634
+6458 3033 5362 4841;
+run;

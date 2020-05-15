@@ -1131,7 +1131,16 @@ proc freq data = test noprint;
 tables ACCTOPENDATE / out=FreqCount  ;
 run;
 
-
+/**** dataline sample ***********************/
+data person; backup 
+input ob $ ac $ ku $ po $;
+datalines;
+4558 9866 2392 2075
+9154 6813 6676 1145
+0938 5161 6084 7081
+8495 4338 2649 9634
+6458 3033 5362 4841;
+run;
 /*****Q18*******************************************************************/
 
 options nocenter macrogen  MFILE symbolgen   mprint  mlogic  merror serror ls=144 ps=77 source2;
@@ -1172,14 +1181,4 @@ proc print data = somersd; run;
 	    var faminc;
 	    id year; /*Var name*/ 
 	run;
-/**** data line sample***********************
-data person; backup 
-input ob $ ac $ ku $ po $;
-datalines;
-4558 9866 2392 2075
-9154 6813 6676 1145
-0938 5161 6084 7081
-8495 4338 2649 9634
-6458 3033 5362 4841;
-run;
-**************************/
+

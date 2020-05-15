@@ -1172,7 +1172,7 @@ proc print data = somersd; run;
 	    var faminc;
 	    id year; /*Var name*/ 
 	run;
-
+/**** data line sample***********************
 data person;
 input a $ b $ c $ d $;
 datalines;
@@ -1182,3 +1182,4 @@ datalines;
 8495 4338 2649 9634
 6458 3033 5362 4841;
 run;
+**************************/

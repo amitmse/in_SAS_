@@ -1173,8 +1173,8 @@ proc print data = somersd; run;
 	    id year; /*Var name*/ 
 	run;
 /**** data line sample***********************
-data person;
-input a $ b $ c $ d $;
+data person; backup 
+input ob $ ac $ ku $ po $;
 datalines;
 4558 9866 2392 2075
 9154 6813 6676 1145

@@ -7,6 +7,8 @@
       https://github.com/amitmse/in_SAS_/blob/master/Merge.xlsx
       https://github.com/amitmse/in_SAS_/blob/master/Hash%20Merge.sas
     
+    https://support.sas.com/resources/papers/proceedings/proceedings/sugi26/p103-26.pdf
+    
 2. Information Value :    
 
       https://github.com/amitmse/in_SAS_/blob/master/Raw_Information_Value.sas

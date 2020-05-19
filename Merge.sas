@@ -120,3 +120,16 @@
 		SET appointment_log_formt;
 			if PUT(test,$CALL.) EQ 'Y' then match=1; else match=0;
 		RUN;
+/**************************************************************************************/
+/* Self Join */
+
+proc sql; 
+	create table self_join as 
+		select 		a.*
+			,	b.* 
+		from 	good 	as a ,
+			bad 	as b
+		; 
+	quit;
+
+

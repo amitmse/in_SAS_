@@ -34,7 +34,8 @@
 /****************************************************************************/
 /* Hash Merge */
 	data Inner_Join;
-			if 0 then set appointment_log patients; /* when all variables are taking from "patients" data otherwise use length */
+			/* when all variables are taking from "patients" data otherwise use length */
+			if 0 then set appointment_log patients;
 			if _N_ = 1 then do;
 				/*length country $ 8;*/
 				declare hash 	cal(dataset:'patients');
@@ -59,7 +60,7 @@
 		set appointment_log;
 			/*Left Join */
 			if cal.find(key:ID, key:age) = 0 then 	do; Gender = Gender; 	DOB = DOB; 	end;
-			else 									do; Gender = '';		DOB	= .;	end;	/*Call Missing(country)*/
+			else 					do; Gender = '';	DOB	= .;	end;
 		run;
 
 /****************************************************************************/

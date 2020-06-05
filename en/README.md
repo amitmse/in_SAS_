@@ -33,8 +33,17 @@ https://owl.purdue.edu/owl/general_writing/index.html
 ------------------------------------------------------------------------------------------------------------------
 ## Sample structure
 
-    - Since I am collecting the data for modelling for PL I wanted to understand. 
-    - PL is a comparatively high default portfolio with a long-run ODR of ~23%. 
+    - "Since" I am collecting the data for modelling for PL I wanted to understand. 
+    - Since at some point of time we will also redevelop another, it will make sense to collect the data for both. 
+    - PL is a "comparatively" high default portfolio with a long-run ODR of ~23%. 
+    - "We therefore", used 2013-2017 period to construct the segmentation.
+    - You can "prioritize the X1 data over X2"
+    - The data have been validated for this exercise and all findings are documented along with data sanity checks.
+    - To comply with roadmap for growth, we are rebuilding models and attempting to fulfil requirements stated in.
+    - How can we obtain data from 2020
+    - Not sure you had the opportunity to reflect on my data request for model re-development.
+    - I am looking to start the development of PL and wanted to obtain from you the existing model details.
+    - As you are aware, the redevelopment of model is already in progress.
 ------------------------------------------------------------------------------------------------------------------
 
 # link

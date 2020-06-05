@@ -16,3 +16,18 @@ And he will probably ask himself two more:
 https://www.writingclasses.com/toolbox/tips-masters/george-orwell-6-questions-6-rules
 
 https://owl.purdue.edu/owl/general_writing/index.html
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+# 
+https://www.fluentu.com/blog/english/blogs-in-english/
+
+https://www.wordstream.com/blog/ws/2014/08/07/improve-writing-skills
+
+https://learning.blogs.nytimes.com/2014/05/08/12-ways-to-learn-vocabulary-with-the-new-york-times-2/
+
+https://www.vocabulary.com/
+
+https://www.english-corpora.org/coca/

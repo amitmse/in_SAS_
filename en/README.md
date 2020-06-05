@@ -33,7 +33,7 @@ https://owl.purdue.edu/owl/general_writing/index.html
 ------------------------------------------------------------------------------------------------------------------
 ## Sample structure
 
-    - Since I am collecting the data for modelling for PL I wanted to understand the period I need to consider so that I can plan my data request accordingly. 
+    - Since I am collecting the data for modelling for PL I wanted to understand. 
     - PL is a comparatively high default portfolio with a long-run ODR of ~23%. 
 ------------------------------------------------------------------------------------------------------------------
 

@@ -1,48 +1,5 @@
 # Writing:
 
-------------------------------------------------------------------------------------------------------------------
-## Article 
-
-------------------------------------------------------
-### A/AN
-	- If "one"/"any" would make sense in front of the noun, use “a.” 
-        Example: I saw one man and one woman walk by = I saw a man and a woman walk by. 
-        (they are random people; I don’t know who they are)
-	- “A” is for one of many.
-	- With names of jobs/nationalities and religions/a day of the week/unknown to listener  
-------------------------------------------------------    
-### THE
-	- If “that” would make sense in front of the noun, use “the.” 
-        Example: I put that book in your room. = I put the book in your room.
-	- “The” is for the only one, or the one in my mind.
-	- unknown to listener 
-    
--------------------------------------------------------------------------------------------------------
-## Punctuation
-
-### Comma
-	- join two independent clauses with comma and conjunction 	
-            i.e. Sam washed his face, and he combed his hair.
-            
-	- join two independent clauses with semicolon & comma and transaction word 
-            i.e. Sam washed his face; therefore, he combed his hair.
-            
-	- use in series of words 									
-            i.e. the dog chases rabbit, cats, and birds.
-            
-	- use after introductory phrases 							
-            i.e. due to bad weather, our was cancelled.
-            
-	- use before and after interrupting phrases 				
-            i.e. this is the reason, therefore, that you should buy a house.
-            
-	- Use a comma after a dependent clause that starts 			
-            i.e. When I went running, I saw a duck
-            
-	- Use a comma after introductory adverbs.					
-            i.e. Finally, I went running.
-    
-------------------------------------------------------------------------------------------------------------------
 ## George Orwell:
 
 A scrupulous writer, in every sentence that he writes, will ask himself at least four questions, thus:
@@ -67,11 +24,136 @@ on when instinct fails. I think the following rules will cover most cases:
     4. Never use the passive where you can use the active.
     5. Never use a foreign phrase, a scientific word, or a jargon word if you can think of an everyday English equivalent.
     6. Break any of these rules sooner than say anything outright barbarous.
+    
+-------------------------------------------------------
+## Cubing
+	"Cubing" means looking at a topic from six different perspectives, like the six sides of a cube. 
+	- First, choose your topic and write it at the top of your page to help you remember it. 
+	- Next, take 5 minutes to write about your topic from six different perspectives 
+	- again, think of the sides of the cube. 
+	You may not be able to do all six, but do the best you can.
+	
+## Wordiness?
+	Another problem in writing is wordiness. Wordiness happens when you use more words than you need to 
+	in order to write what you mean. Everyone has a tendency to be too wordy at times. 
+	Some of the causes of this wordiness are:
+		- Trying to sound too formal or academic. Readers always appreciate clear ideas in less words
+		- Not knowing more precise vocabulary.
+		- Using unnecessary and vague modifiers. Modifiers are: really, very, quite.
+		- Using too many unnecessarily prepositional phrases or possessives.
+		
+	Some steps to take to reduce wordiness when reviewing your work:
+		- Look for any of the phrases from this table and write them more succinctly.
+		- Look for modifiers. Find precise single-word that expresses the same meaning as word + modifier.
+		- Cut lengthy sentence.
+		- Read sentences loud, one by one.
+		- Don't use a passive verb construction when active would be better. 
+		- Eliminate unnecessary personal commentary i.e. I believe, I think, I just want to emphasize etc.
 
-https://www.writingclasses.com/toolbox/tips-masters/george-orwell-6-questions-6-rules
+## Writing : 
+	
+	- Write outline: It's good to create a plan for writing.
+		- Write your introduction and it draw your reader in
+		- Make your topic clear. 
+		- Make it interesting
+		
+	- Craft paragraphs: 
+		- Each paragraph should focus on a main idea.
+		
+	- End with conclusion.
+	- How, when, and what to revise
+	- Checking writing for logical order
+	- Reading backwards
+	
+	- Language Guidelines:
+		- Use active verbs and write actively.
+		- Use present and future verb tenses correctly
+		- Include a variety of sentence types: simple, compound and complex with these words:
+			- the conjunctions and, but, or,so
+			- transition words therefore, however, as a result;
+			- time words before, after, as soon as, while
+			- contrast and condition words although, if
+			- relative pronouns who, which, that, where, when (ADJ clauses)
+			- question words how, where, when, what (NOUN clauses)
+------------------------------------------------------------------------------------------------------------------
+## Article 
 
-https://owl.purdue.edu/owl/general_writing/index.html
+-----------
+### A/AN
+	- If "one"/"any" would make sense in front of the noun, use “a.” 
+        Example: I saw one man and one woman walk by == I saw a man and a woman walk by. 
+        (they are random people; I don’t know who they are)
+	- “A” is for one of many.
+	- With names of jobs/nationalities and religions/a day of the week/unknown to listener  
+----------   
+### THE
+	- If “that” would make sense in front of the noun, use “the.” 
+        Example: I put that book in your room. == I put the book in your room.
+	- “The” is for the only one, or the one in my mind.
+	- unknown to listener 
+    
+-------------------------------------------------------------------------------------------------------
+## Punctuation
 
+### Comma
+	- join two independent clauses with comma and conjunction 	
+            Example: Sam washed his face, and he combed his hair.
+            
+	- join two independent clauses with semicolon & comma and transaction word 
+            Example: Sam washed his face; therefore, he combed his hair.
+            
+	- use in series of words 									
+            Example: the dog chases rabbit, cats, and birds.
+            
+	- use after introductory phrases 							
+            Example: due to bad weather, our was cancelled.
+            
+	- use before and after interrupting phrases 				
+            Example: this is the reason, therefore, that you should buy a house.
+            
+	- Use a comma after a dependent clause that starts 			
+            Example: When I went running, I saw a duck
+            
+	- Use a comma after introductory adverbs.					
+            Example: Finally, I went running.
+    
+### semicolon
+	- Join two compound sentence (avoid too much of use) 
+		i.e. I have painted the house; I still need to sand the floors.
+	
+### Colon
+	- Use for list of items and sentence should be complete (independent clause)
+	
+------------------------------------------------------------------------------------------------------------------
+## Preposition
+
+### On
+	- apply when it refers to open space i.e. on horse/bus/aeroplane/ship/
+### in 
+	- apply when it refers to closed/narrow space i.e. in car/van/rocket
+
+### AT ON IN
+	- (AT - ON - IN) < - - > (Hour - Day - Year)
+		- at 2 o' clock /at 5PM / at noon
+		- on Tuesday / on my birthday / on 8th Aug
+		- in four weeks / in June/ 
+	
+------------------------------------------------------------------------------------------------------------------
+## Transition Words
+
+	- introduce information:
+		Also, Indeed, Further, Furthermore, Likewise, In particular, What's more, In addition, Similarly
+	
+	- conflicts/dismissals/emphasis: 
+		But, However, Nevertheless, Nonetheless, Regardless, 
+	
+	- relationship of cause and effect or consequence: 
+		As, But, For, Since, Otherwise, Consequently, Unless, Thus, Therefore
+		(first statement lead to or cause the other statement)
+	
+	- chronological sequences in time or provide a sequence to a logical argument: 
+		Afterwards, Therefore, To begin with
+	
 ------------------------------------------------------------------------------------------------------------------
 ## Sample structure
 
@@ -100,3 +182,6 @@ https://www.vocabulary.com/
 
 https://www.english-corpora.org/coca/
 
+https://www.writingclasses.com/toolbox/tips-masters/george-orwell-6-questions-6-rules
+
+https://owl.purdue.edu/owl/general_writing/index.html

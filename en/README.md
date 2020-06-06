@@ -118,7 +118,7 @@
 	- Join two compound sentence
 		Example: I have painted the house; I still need to sand the floors.
 		
-	- It is used to connect independent clauses. It shows a closer relationship between the clauses than a period would show.
+	- It is used to connect independent clauses.
 		Example: John was hurt; he knew she only said it to upset him.
 
 ### Colon

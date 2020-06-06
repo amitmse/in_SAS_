@@ -72,6 +72,13 @@
 			- contrast and condition words although, if
 			- relative pronouns who, which, that, where, when (ADJ clauses)
 			- question words how, where, when, what (NOUN clauses)
+		- Connectors:
+			- Moreover,
+			- On the other hand,
+			- In contrast to this,
+			- In addition to this,
+			- However, etc.
+
 			
 ------------------------------------------------------------------------------------------------------------------
 ## Article 
@@ -142,7 +149,7 @@
 	- apply when it refers to open space 
 		Example: on horse/bus/aeroplane/ship/
 	
-### in 
+### In 
 	- apply when it refers to closed/narrow space 
 		Example: in car/van/rocket
 
@@ -174,6 +181,8 @@
     - To Get 	= acquire, obtain, receive
     - To Help	= assist, aid, support	
     
+   
+
 ------------------------------------------------------------------------------------------------------------------
 ## Sample structure
 

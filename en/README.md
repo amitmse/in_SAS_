@@ -9,8 +9,8 @@
 	    4. Is this image fresh enough to have an effect?
 
 	- And he will probably ask himself two more:
-	    1. Could I put it more shortly?
-	    2. Have I said anything that is avoidably ugly?
+	    5. Could I put it more shortly?
+	    6. Have I said anything that is avoidably ugly?
 
 	- One can often be in doubt about the effect of a word or a phrase, and one needs rules that one can rely 
 	   on when instinct fails. I think the following rules will cover most cases:
@@ -78,41 +78,41 @@
 
 ### A/AN
 	- If "one"/"any" would make sense in front of the noun, use “a.” 
-        Example: I saw one man and one woman walk by == I saw a man and a woman walk by. 
-        (they are random people; I don’t know who they are)
+        	Example: I saw one man and one woman walk by == I saw a man and a woman walk by. 
+        	(they are random people; I don’t know who they are)
 	- “A” is for one of many.
 	- With names of jobs/nationalities and religions/a day of the week/unknown to listener  
    
 ### THE
 	- If “that” would make sense in front of the noun, use “the.” 
-        Example: I put that book in your room. == I put the book in your room.
+        	Example: I put that book in your room. == I put the book in your room.
 	- “The” is for the only one, or the one in my mind.
-	- unknown to listener 
+
     
 -------------------------------------------------------------------------------------------------------
 ## Punctuation
 
 ### Comma
 	- join two independent clauses with comma and conjunction 	
-            Example: Sam washed his face, and he combed his hair.
+            	Example: Sam washed his face, and he combed his hair.
             
 	- join two independent clauses with semicolon & comma and transaction word 
-            Example: Sam washed his face; therefore, he combed his hair.
+           	 Example: Sam washed his face; therefore, he combed his hair.
             
 	- use in series of words 									
-            Example: the dog chases rabbit, cats, and birds.
+            	Example: the dog chases rabbit, cats, and birds.
             
 	- use after introductory phrases 							
-            Example: due to bad weather, our was cancelled.
+            	Example: due to bad weather, our was cancelled.
             
 	- use before and after interrupting phrases 				
-            Example: this is the reason, therefore, that you should buy a house.
+            	Example: this is the reason, therefore, that you should buy a house.
             
 	- Use a comma after a dependent clause that starts 			
-            Example: When I went running, I saw a duck
+            	Example: When I went running, I saw a duck
             
 	- Use a comma after introductory adverbs.					
-            Example: Finally, I went running.
+            	Example: Finally, I went running.
        
 ### semicolon: avoid too much of use
 	- Join two compound sentence
@@ -139,9 +139,12 @@
 ## Preposition
 
 ### On
-	- apply when it refers to open space i.e. on horse/bus/aeroplane/ship/
+	- apply when it refers to open space 
+		Example: on horse/bus/aeroplane/ship/
+	
 ### in 
-	- apply when it refers to closed/narrow space i.e. in car/van/rocket
+	- apply when it refers to closed/narrow space 
+		Example: in car/van/rocket
 
 ### AT ON IN
 	- (AT - ON - IN) < - - > (Hour - Day - Year)

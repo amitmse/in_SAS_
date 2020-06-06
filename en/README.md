@@ -64,6 +64,7 @@
 	- Language Guidelines:
 		- Use active verbs and write actively.
 		- Use present and future verb tenses correctly
+		- use strong verb
 		- Include a variety of sentence types: simple, compound and complex with these words:
 			- the conjunctions and, but, or,so
 			- transition words therefore, however, as a result;
@@ -71,17 +72,17 @@
 			- contrast and condition words although, if
 			- relative pronouns who, which, that, where, when (ADJ clauses)
 			- question words how, where, when, what (NOUN clauses)
+			
 ------------------------------------------------------------------------------------------------------------------
 ## Article 
 
------------
 ### A/AN
 	- If "one"/"any" would make sense in front of the noun, use “a.” 
         Example: I saw one man and one woman walk by == I saw a man and a woman walk by. 
         (they are random people; I don’t know who they are)
 	- “A” is for one of many.
 	- With names of jobs/nationalities and religions/a day of the week/unknown to listener  
-----------   
+   
 ### THE
 	- If “that” would make sense in front of the noun, use “the.” 
         Example: I put that book in your room. == I put the book in your room.
@@ -112,9 +113,9 @@
             
 	- Use a comma after introductory adverbs.					
             Example: Finally, I went running.
-    
-### semicolon
-	- Join two compound sentence (avoid too much of use) 
+       
+### semicolon: avoid too much of use
+	- Join two compound sentence
 		Example: I have painted the house; I still need to sand the floors.
 		
 	- It is used to connect independent clauses. It shows a closer relationship between the clauses than a period would show.

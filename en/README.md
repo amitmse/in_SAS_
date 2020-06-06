@@ -222,3 +222,6 @@ https://www.enchantingmarketing.com/swipe-file/
 https://www.blog.consultants500.com/writing-and-translation/top-20-best-writing-blogs-recommended-times-writing-pros/
 https://seths.blog/
 https://copyblogger.com/winning-content-strategy/
+
+Fawlty Towers -> https://www.youtube.com/results?search_query=Fawlty+Towers
+Mind Your Language -> https://www.youtube.com/watch?v=8AJqadFhgrs

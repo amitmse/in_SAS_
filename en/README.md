@@ -1,6 +1,48 @@
 # Writing:
 
 ------------------------------------------------------------------------------------------------------------------
+## Article 
+
+------------------------------------------------------
+### A/AN
+	- If "one"/"any" would make sense in front of the noun, use “a.” 
+        Example: I saw one man and one woman walk by = I saw a man and a woman walk by. 
+        (they are random people; I don’t know who they are)
+	- “A” is for one of many.
+	- With names of jobs/nationalities and religions/a day of the week/unknown to listener  
+------------------------------------------------------    
+### THE
+	- If “that” would make sense in front of the noun, use “the.” 
+        Example: I put that book in your room. = I put the book in your room.
+	- “The” is for the only one, or the one in my mind.
+	- unknown to listener 
+    
+-------------------------------------------------------------------------------------------------------
+## Punctuation
+
+### Comma
+	- join two independent clauses with comma and conjunction 	
+            i.e. Sam washed his face, and he combed his hair.
+            
+	- join two independent clauses with semicolon & comma and transaction word 
+            i.e. Sam washed his face; therefore, he combed his hair.
+            
+	- use in series of words 									
+            i.e. the dog chases rabbit, cats, and birds.
+            
+	- use after introductory phrases 							
+            i.e. due to bad weather, our was cancelled.
+            
+	- use before and after interrupting phrases 				
+            i.e. this is the reason, therefore, that you should buy a house.
+            
+	- Use a comma after a dependent clause that starts 			
+            i.e. When I went running, I saw a duck
+            
+	- Use a comma after introductory adverbs.					
+            i.e. Finally, I went running.
+    
+------------------------------------------------------------------------------------------------------------------
 ## George Orwell:
 
 A scrupulous writer, in every sentence that he writes, will ask himself at least four questions, thus:

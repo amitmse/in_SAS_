@@ -22,16 +22,16 @@ on when instinct fails. I think the following rules will cover most cases:
     2. Never use a long word where a short one will do.
     3. If it is possible to cut a word out, always cut it out.
     4. Never use the passive where you can use the active.
-    5. Never use a foreign phrase, a scientific word, or a jargon word if you can think of an everyday English equivalent.
+    5. Never use a foreign phrase, a scientific word, or a jargon word.
     6. Break any of these rules sooner than say anything outright barbarous.
     
 -------------------------------------------------------
 ## Cubing
-	"Cubing" means looking at a topic from six different perspectives, like the six sides of a cube. 
+	- "Cubing" means looking at a topic from six different perspectives, like the six sides of a cube. 
 	- First, choose your topic and write it at the top of your page to help you remember it. 
 	- Next, take 5 minutes to write about your topic from six different perspectives 
 	- again, think of the sides of the cube. 
-	You may not be able to do all six, but do the best you can.
+	- You may not be able to do all six, but do the best you can.
 	
 ## Wordiness?
 	Another problem in writing is wordiness. Wordiness happens when you use more words than you need to 

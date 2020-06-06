@@ -167,7 +167,13 @@
 	
 	- chronological sequences in time or provide a sequence to a logical argument: 
 		Afterwards, Therefore, To begin with
-	
+
+------------------------------------------------------------------------------------------------------------------
+## Words
+    - Like 	= such as, for example
+    - To Get 	= acquire, obtain, receive
+    - To Help	= assist, aid, support	
+    
 ------------------------------------------------------------------------------------------------------------------
 ## Sample structure
 
@@ -182,6 +188,8 @@
     - Not sure you had the opportunity to reflect on my data request for model re-development.
     - I am looking to start the development of PL and wanted to obtain from you the existing model details.
     - As you are aware, the redevelopment of model is already in progress.
+
+
 ------------------------------------------------------------------------------------------------------------------
 
 # link

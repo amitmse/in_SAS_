@@ -115,9 +115,23 @@
     
 ### semicolon
 	- Join two compound sentence (avoid too much of use) 
-		i.e. I have painted the house; I still need to sand the floors.
-	
+		Example: I have painted the house; I still need to sand the floors.
+		
+	- It is used to connect independent clauses. It shows a closer relationship between the clauses than a period would show.
+		Example: John was hurt; he knew she only said it to upset him.
+
 ### Colon
+
+	It has three main uses. 
+	- The first is after a word introducing a quotation, an explanation, an example, or a series :
+		Example: He was planning to study four subjects: politics, philosophy, sociology and economics.
+
+	- The second is between independent clauses, when the second explains the first, similar to a semicolon:
+		Example: I didn't have time to get changed: I was already late.
+
+	- The third use of a colon is for emphasis:
+		Example: There was one thing she loved more that any other: her dog.
+	
 	- Use for list of items and sentence should be complete (independent clause)
 	
 ------------------------------------------------------------------------------------------------------------------

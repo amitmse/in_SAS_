@@ -57,14 +57,19 @@
 		- Each paragraph should focus on a main idea.
 		
 	- End with conclusion.
+	
 	- How, when, and what to revise
+	
 	- Checking writing for logical order
+	
 	- Reading backwards
 	
 	- Language Guidelines:
+	
 		- Use active verbs and write actively.
 		- Use present and future verb tenses correctly
 		- use strong verb
+		
 		- Include a variety of sentence types: simple, compound and complex with these words:
 			- the conjunctions and, but, or,so
 			- transition words therefore, however, as a result;
@@ -72,13 +77,25 @@
 			- contrast and condition words although, if
 			- relative pronouns who, which, that, where, when (ADJ clauses)
 			- question words how, where, when, what (NOUN clauses)
+			
 		- Connectors:
 			- Moreover,
 			- On the other hand,
 			- In contrast to this,
 			- In addition to this,
 			- However, etc.
+			
+		- Using synonyms
+			- Difficult = hard = challenging
+			- Choose = select = pick up
+			- Suitable course = appropriate course = available course
+			
+		- Changing word forms: 
+			- Difficult to choose = difficult choice  = hard choice
+			- Be responsible = hold/take responsibility for
 
+		- Using “It is”
+			- It is said that XYZ is one of the best
 			
 ------------------------------------------------------------------------------------------------------------------
 ## Article 
@@ -185,31 +202,67 @@
 
 ------------------------------------------------------------------------------------------------------------------
 ## Structures 
+
     - As / Whereas/ While (at the same time).
 	Example: While the figure for factories in Japan went up dramatically to 120,000 in 2010, 
 		the quantity in Korea plummeted to 12,000 at the same time.
 		
-    - Clause, followed by + Noun Phrase
+    - Clause, followed by
 	Example: There was a dramatic growth in the number of factories in Japan to 120.000 in 2010, 
 		followed by a sharp decrease to 1,000 in 2015.
-		
-    - Clause, after Verb – ing
-	Example: The figure for factories in Japan hit a free fall to 1,000 in 2o15, 
-		after undergoing an increase to 120,000 in 2010
 
-    - In comparison to/with  X, which verb, Y verb.
+    - In comparison to/with
 	Example: In comparison with the number of factories in Japan, which witnessed a dramatic increase 
 		to 120,000 in 2010, the quantity in Korea plummeted to 12,000 at this time.
 
-    - X verb, Verb-ing, (which verb)
-	Example: The quantity of factories in Japan went through a period of dramatic increase to 120,000 in 2010,
-		exceeding the number in Korea, which had only 12,000.
-
-
-    - Clause, prior to/before  Verb-ing
+    - Clause, prior to/before
 	Example: The number of factories in Japan experienced an increase to 120,000 in 2010, 
 		before hitting a free fall to 1,000 in 2015.
 
+    - Although: “Although”, also known as “even though” or “is to show this contrast. 
+    	It’s a such a useful word when you’re writing essays or speaking in a formal setting.
+	Example: Although some people would like to have a lot of children, 
+		the cost of raising them has to be considered first.
+
+    - Despite the fact that: If you are not a fan of using although, you can use this structure to be more 
+    	flexible with your sentences, & make your English sound more articulate and fluent.
+	Example: All in all, despite the fact that there are some interesting programmes, 
+		much of the time children spend watching TV would be better spent on other activities.
+		
+    - Nevertheless: 
+	Example: It is true that more and more factories are being built along this stretch of the river and 
+		that a certain amount of waste will inevitably be discharged into the river. Nevertheless, 
+		in all the discussions that I have had with these firms’ representatives, I have not found 
+		one who does not have a responsible attitude to environmental protection.
+		
+    - In spite of: 
+	Example: In spite of the advantages of living in big cities, 
+		people have a proclivity to live in the countryside.
+		
+    - Regardless of : Regardless of: without regard or consideration for
+	Example: Regardless of their skin color, background or what their language is, we should treat everyone equally.
+
+    - Albeit: Although. Albeit is often used to introduce an adjectival or adverbial phrase that makes a 
+    	concession about the preceding noun or verb
+	Example: The sponge was very absorbent, soaking up all the soda, albeit with some effort.
+
+    - Having said that: a signal that they will say something which will contrast with what they said a moment ago
+	Example: I suppose many people could argue that my country’s food isn’t healthy. Having said that, 
+		there is a new trend now toward vegan or vegetarian food and there is a new restaurant 
+		in my neighborhood. I feel great when I eat there!
+	
+    - At the same time: 
+	Example: From my perspective, we are gradually moving towards technology for every kid in the classroom. 
+	At the same time I know there are a range of school districts who can’t afford that kind of technology.
+	
+    - So:
+	Example: So terrible was the storm that a lot of houses were swept away.
+	       So beautifully did he play the guitar that all the audience appreciated him.
+	       
+    - Then comes/come:
+	Example: Then came a divorce, as they had a routine.
+		
+-------------------------------------------------------------------------------------------------------------------
 
 ## Sample Sentence
 
@@ -281,6 +334,7 @@ https://www.enchantingmarketing.com/swipe-file/
 https://www.blog.consultants500.com/writing-and-translation/top-20-best-writing-blogs-recommended-times-writing-pros/
 https://seths.blog/
 https://copyblogger.com/winning-content-strategy/
-
+https://ieltsmaterial.com/7-0-ielts-writing-task-1-3-sentence-structures-compare-numbers/
+https://ieltsmaterial.com/6-useful-structures-to-express-opposing-ideas-in-ielts-writing-task-2/
 Fawlty Towers -> https://www.youtube.com/results?search_query=Fawlty+Towers
 Mind Your Language -> https://www.youtube.com/watch?v=8AJqadFhgrs

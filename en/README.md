@@ -184,7 +184,34 @@
    
 
 ------------------------------------------------------------------------------------------------------------------
-## Sample structure
+## Structures 
+    - As / Whereas/ While (at the same time).
+	Example: While the figure for factories in Japan went up dramatically to 120,000 in 2010, 
+		the quantity in Korea plummeted to 12,000 at the same time.
+		
+    - Clause, followed by + Noun Phrase
+	Example: There was a dramatic growth in the number of factories in Japan to 120.000 in 2010, 
+		followed by a sharp decrease to 1,000 in 2015.
+		
+    - Clause, after Verb – ing
+	Example: The figure for factories in Japan hit a free fall to 1,000 in 2o15, 
+		after undergoing an increase to 120,000 in 2010
+
+    - In comparison to/with  X, which verb, Y verb.
+	Example: In comparison with the number of factories in Japan, which witnessed a dramatic increase 
+		to 120,000 in 2010, the quantity in Korea plummeted to 12,000 at this time.
+
+    - X verb, Verb-ing, (which verb)
+	Example: The quantity of factories in Japan went through a period of dramatic increase to 120,000 in 2010,
+		exceeding the number in Korea, which had only 12,000.
+
+
+    - Clause, prior to/before  Verb-ing
+	Example: The number of factories in Japan experienced an increase to 120,000 in 2010, 
+		before hitting a free fall to 1,000 in 2015.
+
+
+## Sample Sentence
 
     - "Since" I am collecting the data for modelling for PL I wanted to understand. 
     - Since at some point of time we will also redevelop another, it will make sense to collect the data for both. 
@@ -197,6 +224,7 @@
     - Not sure you had the opportunity to reflect on my data request for model re-development.
     - I am looking to start the development of PL and wanted to obtain from you the existing model details.
     - As you are aware, the redevelopment of model is already in progress.
+
 
 
 ------------------------------------------------------------------------------------------------------------------

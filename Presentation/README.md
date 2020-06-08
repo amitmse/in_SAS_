@@ -74,3 +74,16 @@ https://youtu.be/05OW0Ce8rT8
 https://www.livemint.com/money/personal-finance/you-can-get-instant-e-pan-here-is-how-11572940474229.html
 
 https://visme.co/blog/how-to-choose-a-color-scheme/
+
+## Word Bullet: Multi Level
+1. Home ->  Paragraph -> Multilevel List -> Define New Multilevel List...
+2. Select numbers under "Click"
+2. Remove anything in "Enter Formatting for number:" except for Click = 1 and for reminaing, follow below
+3. Choose "Include Level numbers from:" one by one and add . in between
+4. Choose "Number Style for this level:"
+5. Correct "Text Indent at:" and "Aligned at:" 
+6. Choose "Link level to style" i.e. Heading 1, 2, ....
+7. Click on Style (alt + clt + shift + S) to apply above formatting
+
+https://www.youtube.com/watch?v=He_ob8ydc9E
+https://www.youtube.com/watch?v=GevZOS-nCuw

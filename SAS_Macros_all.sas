@@ -1131,7 +1131,7 @@ proc freq data = test noprint;
 tables ACCTOPENDATE / out=FreqCount  ;
 run;
 
-/**** dataline sample ***********************/
+/**** dataline sample*Qaa2021**********************/
 data person; backup 
 input ob $ ac $ ku $ po $;
 datalines;

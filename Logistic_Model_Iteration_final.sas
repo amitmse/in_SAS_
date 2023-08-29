@@ -765,20 +765,20 @@ options mprint mlogic merror serror source2  linesize=256;
 
 %let dev_data			= dev				; 	/* development dataset name*/
 %let val1_data			= val				;	/* validation dataset name otherwise leave blank*/
-%let val2_data			= 					;	/* validation dataset name otherwise leave blank*/
-%let val3_data			= 					;	/* validation dataset name otherwise leave blank*/
-%let bad_var			= ab_ivpr_bad_pl	;	/* Dependent (good/bad) variable. */
-%let model				= DESCENDING		;	/* DESCENDING:Model 1, otherwise leave blank, by default it models 0*/
+%let val2_data			= 				;	/* validation dataset name otherwise leave blank*/
+%let val3_data			= 				;	/* validation dataset name otherwise leave blank*/
+%let bad_var			= ab_ivpr_bad_pl		;	/* Dependent (good/bad) variable. */
+%let model			= DESCENDING			;	/* DESCENDING:Model 1, otherwise leave blank, by default it models 0*/
 %let weight_var			= wgt				;	/* weight variable otherwise blank */
-%let ks_bin				= 10				;	/* number of bins in KS/LIFT/SINGLE GAIN report */
-%let sort_score			= 1					;	/* sort the score varible while generating KS table*/
-%let stepwise			= 1					;	/* 1= run Stepwise*/
-%let exit 				= 0.01				;	/* "0.01/0.05" SLS, significant level for removing a variable in stepwise*/
-%let entry				= 0.01				;	/* SLE, significant level for entering a variable in stepwise*/
+%let ks_bin			= 10				;	/* number of bins in KS/LIFT/SINGLE GAIN report */
+%let sort_score			= 1				;	/* sort the score varible while generating KS table*/
+%let stepwise			= 1				;	/* 1= run Stepwise*/
+%let exit 			= 0.01				;	/* "0.01/0.05" SLS, significant level for removing a variable in stepwise*/
+%let entry			= 0.01				;	/* SLE, significant level for entering a variable in stepwise*/
 %let VIF_CUT_OFF		= 2.0				;	/* VIF(variance inflation factor) cut off for dropping a variable*/
-%let sign_check			= 0					; 	/* Check the sign of coeff. and buid model only with same sign */
-%let P_Value_CUT_OFF	= 0.05				;	/* P value significant level,drop varible based on it*/
-%let TOTAL_NO_OF_VAR	= 10				;	/* Total number of variable in the model*/
+%let sign_check			= 0				; 	/* Check the sign of coeff. and buid model only with same sign */
+%let P_Value_CUT_OFF		= 0.05				;	/* P value significant level,drop varible based on it*/
+%let TOTAL_NO_OF_VAR		= 10				;	/* Total number of variable in the model*/
 
 %let varlist 			= &woe_var_list.
 											;	/* List of model variable */

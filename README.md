@@ -1,20 +1,20 @@
 # SAS macro for Logistic (Scorecard) Model Development
+  
+1. Information Value :    
 
-1. Exploratory Data Analysis (EDA) : 
+      https://github.com/amitmse/in_SAS_/blob/master/Raw_Information_Value.sas
+      https://github.com/amitmse/in_SAS_/blob/master/Raw_information_value_LP.sas
+      https://github.com/amitmse/in_SAS_/blob/master/Information_value_with_Weight.sas
+      https://github.com/amitmse/in_SAS_/blob/master/Information_value_Raw_and_Monotonic_binning.sas
+
+2. Exploratory Data Analysis (EDA) : 
       
       https://github.com/amitmse/in_SAS_/blob/master/EDA.sas
       https://github.com/amitmse/in_SAS_/blob/master/Create%20Historical%20and%20Performance%20Variables.sas
       https://github.com/amitmse/in_SAS_/blob/master/Merge.xlsx
       https://github.com/amitmse/in_SAS_/blob/master/Hash%20Merge.sas
     
-    https://support.sas.com/resources/papers/proceedings/proceedings/sugi26/p103-26.pdf
-    
-2. Information Value :    
-
-      https://github.com/amitmse/in_SAS_/blob/master/Raw_Information_Value.sas
-      https://github.com/amitmse/in_SAS_/blob/master/Raw_information_value_LP.sas
-      https://github.com/amitmse/in_SAS_/blob/master/Information_value_with_Weight.sas
-      https://github.com/amitmse/in_SAS_/blob/master/Information_value_Raw_and_Monotonic_binning.sas
+      https://support.sas.com/resources/papers/proceedings/proceedings/sugi26/p103-26.pdf
 
 3. Variable Binning (WoE monotonic) :
 

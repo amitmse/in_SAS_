@@ -1,40 +1,22 @@
-
-
+/********************************************************************************************/;
+/****** Macro For developing logistic model with Lift table, VIF & Correlation tables********/;
+/********************************************************************************************/;
 options mprint mlogic merror serror source2  linesize=256;
+/************KS Macro************************************************************************/;
 
-/***************************************************************************************/;
-/****** Macro FOR developing logistic model with Lift , VIF & Correlation tables********/;
-/***************************************************************************************/;
-/*Logistic model is predicting "1" (bad=1) */;
-/*dev_data 		= development data*/;
-/* if any validation dataset is not available then leave as a blank */;
-/*val1_data		= Intime validation data;*/;
-/*val2_data		= out of time data*/;
-/*val3_data 	= out of time data*/;
-/*bad_var		= Bad variable */;
-/*model			= DESCENDING if model 1(bad), other wise leave blank model 0(good)*/
-/*score_var 	= Score variable 
-								scale_score 		=> whatever modeling either 1/0,
-								Reverse_scale_Score => Other wise, */;
-/*weight_var	= Weight variable, if not available then put 1*/
-/*No_bin 		= No of bin in lift table (10/20)*/
-/**************************************************************************************/;
-/***************************************************************************************/;
-
-
-/************KS Macro*******************************************************************/;
-	%macro KS(in_data, bad, score, scr_order,  bin_ks, weight, no_bin );
-		%let input_data     = &in_data.; 	/* name of score data data */
-		%let depdended_var  = &bad.;  		/* write name of dependent variable.  (bad=0/1) */
-		%let good           = good ;  		/* mention depdended_var=1 refer to good or bad */
-		%let bad            = bad;    		/* mention depdended_var=0 refer to good or bad */
+%macro KS(in_data, bad, score, scr_order,  bin_ks, weight, no_bin );
+		%let input_data         = &in_data.; 	/* name of score data data */
+		%let depdended_var      = &bad.;  	/* write name of dependent variable.  (bad=0/1) */
+		%let good               = good ;  	/* mention depdended_var=1 refer to good or bad */
+		%let bad                = bad;    	/* mention depdended_var=0 refer to good or bad */
 		%let score_variable	= &score. ; 	/* model_score non_model_score */
-		%let order			= &scr_order. ; /* 1=ascending, 2=descending */
-		%let weight 		= &weight;		/* Weight variable. If no weight then give 1 */
-		%let bin 			= &no_bin;		/* No of bin in lift table */
+		%let order		= &scr_order. ; /* 1=ascending, 2=descending */
+		%let weight 		= &weight;	/* Weight variable. If no weight then give 1 */
+		%let bin 		= &no_bin;	/* No of bin in lift table */
 		%put &score_variable. ;
 		%KS_CALCULATION(&score_variable.); 	/* KS calculation */
-	%mend KS;
+%mend KS;
+
 /**/
 %macro KS_CALCULATION(score);
 
@@ -995,3 +977,19 @@ run;
 %Mend risk_ranking_lift_table;
 
 %risk_ranking_lift_table(input=dev1, bad_flag=ab_ivpr_bad_pl, score=P_ab_ivpr_bad_pl1, total_bins=10 );
+
+/******************************************************************************************************************/
+/*Logistic model is predicting "1" (bad=1) */;
+/*dev_data 		= development data*/;
+/* if any validation dataset is not available then leave as a blank */;
+/*val1_data		= Intime validation data;*/;
+/*val2_data		= out of time data*/;
+/*val3_data 	= out of time data*/;
+/*bad_var		= Bad variable */;
+/*model			= DESCENDING if model 1(bad), other wise leave blank model 0(good)*/
+/*score_var 	= Score variable 
+								scale_score 		=> whatever modeling either 1/0,
+								Reverse_scale_Score => Other wise, */;
+/*weight_var	= Weight variable, if not available then put 1*/
+/*No_bin 		= No of bin in lift table (10/20)*/
+/******************************************************************************************************************/

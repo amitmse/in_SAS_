@@ -22,7 +22,6 @@
       https://github.com/amitmse/in_SAS_/blob/master/Create%20Historical%20and%20Performance%20Variables.sas
       https://github.com/amitmse/in_SAS_/blob/master/Merge.xlsx
       https://github.com/amitmse/in_SAS_/blob/master/Hash%20Merge.sas
-    
       https://support.sas.com/resources/papers/proceedings/proceedings/sugi26/p103-26.pdf
 
 6. Lift Table (KS & GINI):

@@ -1,29 +1,8 @@
-/**/
-proc printto log="C:\Users\Lenovo\Downloads\fwdproject\test\autobin.txt";
+/********************************************************************************************/
+/**** Create WOE variable: Fine classing and Coarse classing (monotonic binning ) ***********/
+/********************************************************************************************/
 
-/***---
-      libin 	= input libname; if not defined in autoexec.sas, define above
-      indata 	= input data set name
-      dv 		= good-bad flag
-      target 	= 1 if logistic regression will be modeling 1, or 0 if logistic regression will be modeling 0 
-      keeplst 	= list of candidate numeric predictors
-      binproc 	= RANK (if "proc rank" is used to determine initial bins; this procedure does not allow appropriate 
-					weighting of observations in "proc rank", but the
-                	rest of procedures appropriately weighs the observations) 
-                	or 
-				  DATA (if data step is used insted; this approach allows appropriate weighing of observations 
-					in all the procedures used)
-      miss 		= deault letter missing value assigned to missing value = . (used to handle situations where 
-					"proc transreg" does not put all
-             		missing value = . in one variable bin'' make sure that this letter is not assigned to any 
-					other variable as default missing value 
-      weight 	= weight variable (leave blank if not applicable)
-      modlabel 	= model label
-      woeout 	= output file name containing the dummy-variable codes
-	  Raw_bin	= 1:Information value based on raw binning 
-	  CA_CODE	= 1:SAS code for Characteristic Analysis
-	  out_data 	= output dataset which will have WOE and CA variables
----***/
+proc printto log="C:\Users\Lenovo\Downloads\fwdproject\test\autobin.txt";
 
 %MACRO WOE(	) ;
 
@@ -1597,10 +1576,13 @@ filename DA	"&output.generate_sas_dataset_by_using_WOE_and_CA_code_from_autobinn
 	%if %sysfunc(exist(Char_GB_missing)) 	%then %do;	proc delete data =Char_GB_missing; 		run;	%end;
 	%if %sysfunc(exist(Char_Nonmissing)) 	%then %do;	proc delete data =Char_Nonmissing ; 	run; 	%end;
 
-/**********************************************************************************************/ 
+/***********************************************************************************************************************************/ 
 %MEND WOE ;
-/**********************************************************************************************/
-/**********************************************************************************************/
+/***********************************************************************************************************************************/ 
+/*** END of MACRO**/
+/***********************************************************************************************************************************/ 
+
+
 /* Test data */
 /*libname local  'C:\Users\Lenovo\Downloads\fwdproject\test';*/
 
@@ -1706,6 +1688,33 @@ run;
 %let excel		=2				;	/*1=ods(output in multiple excel file), 2=tagset(output in single excel file)*/
 %let keeplst	=&keep_var.		;	/* Numeric variable list	*/ 
 /********************************************************************************/
+
+
+
+/********************************************************************************/
+/***---
+      libin 	= input libname; if not defined in autoexec.sas, define above
+      indata 	= input data set name
+      dv 		= good-bad flag
+      target 	= 1 if logistic regression will be modeling 1, or 0 if logistic regression will be modeling 0 
+      keeplst 	= list of candidate numeric predictors
+      binproc 	= RANK (if "proc rank" is used to determine initial bins; this procedure does not allow appropriate 
+					weighting of observations in "proc rank", but the
+                	rest of procedures appropriately weighs the observations) 
+                	or 
+				  DATA (if data step is used insted; this approach allows appropriate weighing of observations 
+					in all the procedures used)
+      miss 		= deault letter missing value assigned to missing value = . (used to handle situations where 
+					"proc transreg" does not put all
+             		missing value = . in one variable bin'' make sure that this letter is not assigned to any 
+					other variable as default missing value 
+      weight 	= weight variable (leave blank if not applicable)
+      modlabel 	= model label
+      woeout 	= output file name containing the dummy-variable codes
+	  Raw_bin	= 1:Information value based on raw binning 
+	  CA_CODE	= 1:SAS code for Characteristic Analysis
+	  out_data 	= output dataset which will have WOE and CA variables
+---***/
 %WOE() ;
 /********************************************************************************/
 proc printto;run;

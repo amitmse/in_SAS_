@@ -1,14 +1,23 @@
 # SAS macro for Logistic (Scorecard) Model Development
-  
-1. Information Value :    
+
+1. Logistic Model :
+
+      https://github.com/amitmse/in_SAS_/blob/master/Logistic_Model_Iteration_final.sas
+
+2. Variable Binning (WoE monotonic) :
+
+      https://github.com/amitmse/in_SAS_/blob/master/Automatic_binning_for_numeric_and_character_variables_woe_method.sas
+      
+      https://github.com/amitmse/in_SAS_/blob/master/Woe_calculation_Macro.sas
+   
+3. Information Value :    
 
       https://github.com/amitmse/in_SAS_/blob/master/Information_value_Raw_and_Monotonic_binning.sas
       https://github.com/amitmse/in_SAS_/blob/master/Raw_Information_Value.sas
       https://github.com/amitmse/in_SAS_/blob/master/Raw_information_value_LP.sas
       https://github.com/amitmse/in_SAS_/blob/master/Information_value_with_Weight.sas
       
-
-3. Exploratory Data Analysis (EDA) : 
+4. Exploratory Data Analysis (EDA) : 
       
       https://github.com/amitmse/in_SAS_/blob/master/EDA.sas
       https://github.com/amitmse/in_SAS_/blob/master/Create%20Historical%20and%20Performance%20Variables.sas
@@ -16,16 +25,6 @@
       https://github.com/amitmse/in_SAS_/blob/master/Hash%20Merge.sas
     
       https://support.sas.com/resources/papers/proceedings/proceedings/sugi26/p103-26.pdf
-
-4. Variable Binning (WoE monotonic) :
-
-      https://github.com/amitmse/in_SAS_/blob/master/Automatic_binning_for_numeric_and_character_variables_woe_method.sas
-      
-      https://github.com/amitmse/in_SAS_/blob/master/Woe_calculation_Macro.sas
-
-5. Logistic Model :
-
-      https://github.com/amitmse/in_SAS_/blob/master/Logistic_Model_Iteration_final.sas
 
 6. Lift Table (KS & GINI):
 

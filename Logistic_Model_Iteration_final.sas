@@ -1,5 +1,5 @@
 /********************************************************************************************/;
-/****** Macro For developing logistic model with Lift table, VIF & Correlation tables********/;
+/****** Macro for developing logistic model iterations ********/;
 /********************************************************************************************/;
 options mprint mlogic merror serror source2  linesize=256;
 /************KS Macro************************************************************************/;

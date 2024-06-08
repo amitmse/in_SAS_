@@ -1,10 +1,11 @@
 # SAS macro for Logistic (Scorecard) Model Development
 
-1. Logistic Model :
-
+1. Logistic Model : 
       https://github.com/amitmse/in_SAS_/blob/master/Logistic_Model_Iteration_final.sas
-
-2. Variable Binning (WoE monotonic) :
+   
+      Iteration of Logistic Model based on factors: VIF, Sign of beta, P-Value, No. of variables
+   
+3. Variable Binning (WoE monotonic) :
 
       https://github.com/amitmse/in_SAS_/blob/master/Automatic_binning_for_numeric_and_character_variables_woe_method.sas
    

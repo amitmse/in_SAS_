@@ -1,6 +1,6 @@
 # SAS macro for Logistic (Scorecard) Model Development
 
-1. Logistic Model : Iteration of Logistic Model based on VIF, Sign of beta, P-Value, No. of variables
+1. Logistic Model : Iterate Logistic Regression Model based on VIF, Sign of beta, P-Value, No. of variables
 
    https://github.com/amitmse/in_SAS_/blob/master/Logistic_Model_Iteration_final.sas
    

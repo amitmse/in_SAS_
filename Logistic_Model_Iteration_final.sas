@@ -1,6 +1,6 @@
 /*******************************************************************************************************/;
 /****** What does this code do?
-	Iteration of Logistic Model based on factors: VIF, Sign of beta, P-Value, No. of variables
+	Iteration of Logistic Model based on VIF, Sign of beta, P-Value, No. of variables
  *******************************************************************************************************/;
 
 /********************************************************************************************/;

@@ -15,8 +15,9 @@ libname local  'F:\AMIT\TVS';
 %let Val_data     	= Val;				/* Validation  dataset name */
 %let dep_var  		= gbi_tag;  	 	/* Dependend/bad Variable (bad=0/1) name */
 %let Weight_var		= wgt;			 	/* Weight variable name, if no weight then put 1 */
-%let No_Var			= 6;			 	/* Total Number of variable for Characteristic Analysis*/
-%let ext			= _B;				/* Suffix of bin variable */
+%let No_Var		= 6;			 	/* Total Number of variable for Characteristic Analysis*/
+%let ext		= _B;				/* Suffix of bin variable */
+
 /* List of variables for Characteristic Analysis */
 %let WoE_Var_list	= ; 
 /**********************************************************************************************************************/
@@ -39,10 +40,10 @@ libname local  'F:\AMIT\TVS';
 	%let Dev_woe     	= &Dev_data._woe; 	%put &Dev_woe.;
 	%let Val_woe     	= &Val_data._woe;	%put &Val_woe.;
 
-    %do i = 1 %to &No_Var.; 						/* (&No_Var.) count of total variable for Characteristic Analysis */
+    %do i = 1 %to &No_Var.; 				/* (&No_Var.) count of total variable for Characteristic Analysis */
         %let WoE_Var = %scan(&WoE_Var_list., &i.); 	/* get the variable name one by one */
-        %put &WoE_Var.; 								/* check the variable name */
-        %WoE_Cal(&WoE_Var.); 						/* Macro call for WoE calculation */
+        %put &WoE_Var.; 				/* check the variable name */
+        %WoE_Cal(&WoE_Var.); 				/* Macro call for WoE calculation */
     %end;
 
 %mend WoE;

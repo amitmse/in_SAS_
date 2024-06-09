@@ -43,9 +43,9 @@
    
       		https://github.com/amitmse/in_SAS_/blob/master/Information_value_with_Weight.sas
       
-4. Exploratory Data Analysis (EDA) : 
-      
-      https://github.com/amitmse/in_SAS_/blob/master/EDA.sas
+4. **Exploratory Data Analysis (EDA)** : https://github.com/amitmse/in_SAS_/blob/master/EDA.sas
+
+   		Provides basic distribution of data i.e., count, missing, unique, sum, mean, STD, percentile
    
       https://github.com/amitmse/in_SAS_/blob/master/Create%20Historical%20and%20Performance%20Variables.sas
    
@@ -55,7 +55,7 @@
    
       https://support.sas.com/resources/papers/proceedings/proceedings/sugi26/p103-26.pdf
 
-5. Lift Table (KS & GINI):
+6. Lift Table (KS & GINI):
 
       https://github.com/amitmse/in_SAS_/blob/master/Lift_Table_v1.sas
    
@@ -67,29 +67,29 @@
    
       https://github.com/amitmse/in_SAS_/blob/master/GINI.xlsx
 
-6. Marginal KS:
+7. Marginal KS:
 
       https://github.com/amitmse/in_SAS_/blob/master/Marginal_KS_Macro.sas
 
-7. Characteristic Analysis Macro:
+8. Characteristic Analysis Macro:
 
       https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro.sas
     
       https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro_LP.sas
 
-8. Cluster Analysis : 
+9. Cluster Analysis : 
 
       https://github.com/amitmse/in_SAS_/blob/master/Cluster%20Code.sas
 
-9. Decision Tree:
+10. Decision Tree:
 
       https://github.com/amitmse/in_SAS_/blob/master/Decision%20Tree.sas
 
-10. Vintage Analysis:
+11. Vintage Analysis:
 
       https://github.com/amitmse/in_SAS_/blob/master/3.Vintage_Analysis_Final.sas
 
-11. Chi-Square :
+12. Chi-Square :
 
       https://github.com/amitmse/in_SAS_/blob/master/Chi-Square%20Macro.sas
 

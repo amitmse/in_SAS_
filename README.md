@@ -16,14 +16,12 @@
 			- Correlation with bad and model variable
 
 2. **Weight of Evidence Variable computation**: https://github.com/amitmse/in_SAS_/blob/master/Automatic_binning_for_numeric_and_character_variables_woe_method.sas
-
  		Create WOE variables for numeric and character variables with following options 
 			- Raw WOE binning 	
 			- Monotonic WOE binning	
 			- Provide SAS code to generate Monotonic WOE binning variables 
    
 	https://github.com/amitmse/in_SAS_/blob/master/Woe_calculation_Macro.sas
-
    		Weight of Evidence Calculation
      
 3. Information Value :    

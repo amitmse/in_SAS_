@@ -75,7 +75,7 @@
 
       https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro.sas
     
-      https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro_LP.sas
+      		https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro_LP.sas
 
 9. Cluster Analysis : 
 
@@ -93,21 +93,21 @@
 
       https://github.com/amitmse/in_SAS_/blob/master/Chi-Square%20Macro.sas
 
-13. Score scale by PDO
+13. Score scale by Point to Double the Odds (PDO): https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO_Method.sas
 
-      https://github.com/amitmse/in_SAS_/blob/master/Point%20Score%20by%20PDO%20Method.xlsx
+		- Scale score using Point to Double the Odds method.
+    		
+      		https://github.com/amitmse/in_SAS_/blob/master/Point%20Score%20by%20PDO%20Method.xlsx
     
-      https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO_Method.sas
+      		https://github.com/amitmse/in_SAS_/blob/master/PDO%20Score.xlsx
     
-      https://github.com/amitmse/in_SAS_/blob/master/PDO%20Score.xlsx
+      		https://github.com/amitmse/in_SAS_/blob/master/PDO.sas
     
-      https://github.com/amitmse/in_SAS_/blob/master/PDO.sas
+      		https://github.com/amitmse/in_SAS_/blob/master/PDO_Calculation.sas
     
-      https://github.com/amitmse/in_SAS_/blob/master/PDO_Calculation.sas
-    
-      https://github.com/amitmse/in_SAS_/blob/master/Scale_Score_by_PDO.sas
+      		https://github.com/amitmse/in_SAS_/blob/master/Scale_Score_by_PDO.sas
       
-14. Profile Analysis:
+15. Profile Analysis:
 
       https://github.com/amitmse/in_SAS_/blob/master/Profile_Analysis.sas
 

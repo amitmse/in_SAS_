@@ -2,25 +2,26 @@
 
 1. Logistic Model: 
 	
- 	This one iterates Logistic Regression Model and provide range of model options.
-   	Final model is based of following options ( user cut-off ):
-	   	- VIF
+ 		This one iterates Logistic Regression Model and provide range of model options.
+   		Final model is based of following options ( user cut-off ):
    
-	   	- Sign of beta
-   	
-	   	- P-Value
-   	
-	   	- No. of variables
+	   		- VIF
    
-	Along with model it provides following metrics:
+	   		- Sign of beta
+   	
+	   		- P-Value
+   	
+	   		- No. of variables
+   
+		Along with model it provides following metrics:
 
-		- KS
+			- KS
    	   
-		- Concordant, Discordant, Pairs, Somers D
+			- Concordant, Discordant, Pairs, Somers D
    
-		- AUC/C-Stat/Area under curve
+			- AUC/C-Stat/Area under curve
    
-		- Correlation with bad and model variable
+			- Correlation with bad and model variable
    
    	https://github.com/amitmse/in_SAS_/blob/master/Logistic_Model_Iteration_final.sas
 

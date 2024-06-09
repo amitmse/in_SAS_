@@ -26,11 +26,12 @@
 
    		Weight of Evidence Calculation
      
-4. Information Value :    
+4. **Computation of Information Value and Weight of Evidence Variable**:    
 
       https://github.com/amitmse/in_SAS_/blob/master/Information_value_Raw_and_Monotonic_binning.sas
 
-   		Create WOE variables for numeric and character variables with following options 
+   		Compute Information value and Weight of Evidence variables with following options
+   			- Information value
 			- Raw WOE binning 	
 			- Monotonic WOE binning	
 			- Provide SAS code to generate Monotonic WOE binning variables 

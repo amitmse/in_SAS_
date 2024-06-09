@@ -29,14 +29,19 @@
 4. Information Value :    
 
       https://github.com/amitmse/in_SAS_/blob/master/Information_value_Raw_and_Monotonic_binning.sas
-   
+
+   		Create WOE variables for numeric and character variables with following options 
+			- Raw WOE binning 	
+			- Monotonic WOE binning	
+			- Provide SAS code to generate Monotonic WOE binning variables 
+
       https://github.com/amitmse/in_SAS_/blob/master/Raw_Information_Value.sas
    
       https://github.com/amitmse/in_SAS_/blob/master/Raw_information_value_LP.sas
    
       https://github.com/amitmse/in_SAS_/blob/master/Information_value_with_Weight.sas
       
-5. Exploratory Data Analysis (EDA) : 
+4. Exploratory Data Analysis (EDA) : 
       
       https://github.com/amitmse/in_SAS_/blob/master/EDA.sas
    
@@ -48,7 +53,7 @@
    
       https://support.sas.com/resources/papers/proceedings/proceedings/sugi26/p103-26.pdf
 
-6. Lift Table (KS & GINI):
+5. Lift Table (KS & GINI):
 
       https://github.com/amitmse/in_SAS_/blob/master/Lift_Table_v1.sas
    
@@ -60,29 +65,29 @@
    
       https://github.com/amitmse/in_SAS_/blob/master/GINI.xlsx
 
-7. Marginal KS:
+6. Marginal KS:
 
       https://github.com/amitmse/in_SAS_/blob/master/Marginal_KS_Macro.sas
 
-8. Characteristic Analysis Macro:
+7. Characteristic Analysis Macro:
 
       https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro.sas
     
       https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro_LP.sas
 
-9. Cluster Analysis : 
+8. Cluster Analysis : 
 
       https://github.com/amitmse/in_SAS_/blob/master/Cluster%20Code.sas
 
-10. Decision Tree:
+9. Decision Tree:
 
       https://github.com/amitmse/in_SAS_/blob/master/Decision%20Tree.sas
 
-11. Vintage Analysis:
+10. Vintage Analysis:
 
       https://github.com/amitmse/in_SAS_/blob/master/3.Vintage_Analysis_Final.sas
 
-12. Chi-Square :
+11. Chi-Square :
 
       https://github.com/amitmse/in_SAS_/blob/master/Chi-Square%20Macro.sas
 

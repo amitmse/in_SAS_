@@ -369,19 +369,19 @@ run;
 /* Call Macro */	
 %let libin		=work			;	/* libname of input data i.e work/anything*/
 %let indata		=dev			;	/* input dataset name	*/
-%let dv			=cb_ivpr_bad	;	/* dependend (good/bad) variable name, 1 should be bad on concern thing */
-%let target		=1				;	/* what to be modeled either 1 or 0, model for good or bad */
-%let binproc	=Rank   		;	/* method to create a raw bin either Rank or data. Choose anyone*/
-%let miss		=.				;	/* deault letter missing value assigned to missing value = .*/
+%let dv			=cb_ivpr_bad		;	/* dependend (good/bad) variable name, 1 should be bad on concern thing */
+%let target		=1			;	/* what to be modeled either 1 or 0, model for good or bad */
+%let binproc		=Rank   		;	/* method to create a raw bin either Rank or data. Choose anyone*/
+%let miss		=.			;	/* deault letter missing value assigned to missing value = .*/
 %let weight		=wgt			;	/* weight variable (leave blank if not applicable)*/
-%let group		=10				;	/* Max number of split in a variable */
-%let modlabel	=HK				;	/* Project name */
-%let Raw_bin	=1				;	/* 1: Information value based on raw binning*/
-%let CA_CODE	=1				;	/* 1:SAS code for Characteristic Analysis*/
-%let out_data	=dev			;	/* output dataset which will have WOE and CA variables*/
-%let Lib_output	=local			;	/* Save overall infoval dataset. it will be used in logistic iteratation code*/
-%let excel		=2				;	/*1=ods(output in multiple excel file), 2=tagset(output in single excel file)*/
-%let keeplst	=&keep_var.		;	/* Numeric variable list	*/ 
+%let group		=10			;	/* Max number of split in a variable */
+%let modlabel		=HK			;	/* Project name */
+%let Raw_bin		=1			;	/* 1: Information value based on raw binning*/
+%let CA_CODE		=1			;	/* 1:SAS code for Characteristic Analysis*/
+%let out_data		=dev			;	/* output dataset which will have WOE and CA variables*/
+%let Lib_output		=local			;	/* Save overall infoval dataset. it will be used in logistic iteratation code*/
+%let excel		=2			;	/*1=ods(output in multiple excel file), 2=tagset(output in single excel file)*/
+%let keeplst		=&keep_var.		;	/* Numeric variable list	*/ 
 %let pd			= pd			;	/* probability from logistic for LP*/
 /********************************************************************************/
 

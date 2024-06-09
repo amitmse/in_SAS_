@@ -1,8 +1,13 @@
 
+/**********************************************************************************************************/;
+/****** Chi-Squaree ***************************************************************************************/;
+/****** http://www.lexjansen.com/nesug/nesug07/sa/sa10.pdf			***************************/;
+/****** https://ctspedia.org/wiki/pub/CTSpedia/StatToolsTopic052/Chisquare.sas	***************************/;
+/**********************************************************************************************************/;
+
 Options mprint mlogic symbolgen;
 
-/*http://www.lexjansen.com/nesug/nesug07/sa/sa10.pdf*/
-/*https://ctspedia.org/wiki/pub/CTSpedia/StatToolsTopic052/Chisquare.sas*/
+
 
 Libname test 'C:\Users\Lenovo\Downloads\fwdproject\test';
 

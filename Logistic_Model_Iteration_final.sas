@@ -1,7 +1,22 @@
 /*******************************************************************************************************/;
-/****** What does this code do?
-	Iterate Logistic Regression Model based on VIF, Sign of beta, P-Value, No. of variables
- *******************************************************************************************************/;
+/****** What does this code do?	************************************************************************/;
+/*******************************************************************************************************/;
+/************ This one iterates Logistic Regression Model and provide range of model options ************
+******************* Final model is based of following options ( user cut-off ): *************************
+*******************	- VIF			*********************************************************
+*******************	- Sign of beta		*********************************************************
+*******************	- P-Value		*********************************************************
+*******************	- No. of variables	*********************************************************
+*********************************************************************************************************
+******************* Along with model it provides following metrics: *************************************
+*******************	- KS					    *************************************
+*******************	- Concordant, Discordant, Pairs, Somers D   *************************************
+*******************	- AUC/C-Stat/Area under curve		    *************************************
+*******************	- Correlation with bad and model variable   *************************************
+*********************************************************************************************************/;
+/********************************************************************************************************/;
+
+
 
 /********************************************************************************************/;
 options mprint mlogic merror serror source2  linesize=256;
@@ -25,8 +40,8 @@ options mprint mlogic merror serror source2  linesize=256;
 
 	data &input_data._1;
 	set  &input_data.;
-		wgt		=&weight.;
-		_tot_	=1;
+		wgt	= &weight.;
+		_tot_	= 1;
 	/*	scale_score = round(score*1000,1);*/
 	run;
 
@@ -49,7 +64,7 @@ options mprint mlogic merror serror source2  linesize=256;
 	proc sql noprint; select  count /*(&depdended_var.)*/ into:total_good  	
 								from BadsCount where &depdended_var.=0;quit;
 		%let total   		= %SYSEVALF(&total_bad + &total_good);
-		%let tot_bad_rate   = %SYSEVALF(&total_bad./&total.);
+		%let tot_bad_rate   	= %SYSEVALF(&total_bad./&total.);
 		%put &total.;
 		%put &total_bad.;
 		%put &total_good.; 
@@ -68,10 +83,10 @@ options mprint mlogic merror serror source2  linesize=256;
 		weight wgt;
 		var  &score. &depdended_var. _tot_ ;
 		output out = data2  (Drop = _FREQ_ _TYPE_  )
-							MIN(&score.) 			= min_score 
-							MAX(&score.) 			= max_score 
+							MIN(&score.) 		= min_score 
+							MAX(&score.) 		= max_score 
 							SUM(&depdended_var.) 	= nbr_&bad.
-							sum(_tot_) 				= Total_bin; 
+							sum(_tot_) 		= Total_bin; 
 	run;
  
 	data data3;
@@ -102,9 +117,9 @@ options mprint mlogic merror serror source2  linesize=256;
 		retain cum_pct_&bad.  cum_pct_&good. 0	;
 			cum_pct_&bad. 		= sum(cum_pct_&bad. , pct_&bad.)  		;
 			cum_pct_&good.		= sum(cum_pct_&good., pct_&good.) 		;
-			KS 					= abs(cum_pct_&good. - cum_pct_&bad.)	;
+			KS 			= abs(cum_pct_&good. - cum_pct_&bad.)	;
 			lag_cum_pct_&bad.	= lag(cum_pct_&bad.)					;
-			Gini				= ((sum(cum_pct_&bad.,lag_cum_pct_&bad.))/2)*(pct_total);
+			Gini			= ((sum(cum_pct_&bad.,lag_cum_pct_&bad.))/2)*(pct_total);
 			lag_&bad._rate 		= lag(&bad._rate)						;
 		        if _n_=1 then inc_monotonic =0;
         else    if lag_&bad._rate > &bad._rate then inc_monotonic= 1; else inc_monotonic=99;
@@ -130,10 +145,10 @@ options mprint mlogic merror serror source2  linesize=256;
 	proc sql /*noprint*/; 
 		create table _summary_ks_	as 
 				select 
-					&iteratation.					as Model length 5						,
-					max(KS) 						as KS_&input_data. 	FORMAT=PERCENT7.2	,
+					&iteratation.			as Model length 5					,
+					max(KS) 			as KS_&input_data. 	FORMAT=PERCENT7.2		,
 					abs((sum(Gini)-(0.5))/(0.5)) 	as Gini_index_&input_data.				,
-					&Somers_D						as Somers_D_&input_data.				,
+					&Somers_D			as Somers_D_&input_data.				,
 					case when sum(Break_Risk_Rank) >0 then 'Yes' else 'No' end as Risk_rank_break_&input_data.
 				from data5; 
 	quit;
@@ -171,7 +186,7 @@ options mprint mlogic merror serror source2  linesize=256;
 		/* generating the lift table*/;
 		Title "KS Table: &indata. - model_score"; 
 			%KS(in_data		=&indata._scored	,	
-				bad			=&bad_var.			,	
+				bad		=&bad_var.		,	
 				score		=model_score		, 
 				scr_order	=&sort_score.		,
 				weight		=&weight_var. 		, 
@@ -179,7 +194,7 @@ options mprint mlogic merror serror source2  linesize=256;
 			);
 		Title "KS Table: &indata. - non_model_score"; 
 			%KS(in_data		=&indata._scored	,	
-				bad			=&bad_var.			,	
+				bad		=&bad_var.		,	
 				score		=non_model_score	, 
 				scr_order	=&sort_score.		,
 				weight		=&weight_var. 		, 
@@ -196,7 +211,7 @@ options mprint mlogic merror serror source2  linesize=256;
 %macro _model_(stepwise_info);
 	/* generate parameter estimate in dataset */
 	ods output 	parameterestimates	=	estimate
-				Association 		= 	test0					; 
+				Association 	= 	test0			; 
 		proc logistic data=dev_test_ 	&model. 	namelen=32	;
 			model &bad_var. = &model_var. / &stepwise_info. lackfit;
 			Weight wgt;
@@ -211,7 +226,7 @@ options mprint mlogic merror serror source2  linesize=256;
 	data 	estimate1;
 	set 	estimate end=eof;
 		format equation $250.;
-					if _N_ =1 	then equation="("||Estimate||")+";
+				if _N_ =1 	then equation="("||Estimate||")+";
 			else 	if eof =1 	then equation=trim(Variable)||"*("||trim(Estimate)||")";
 			else 	if _N_ >1 	then equation=trim(Variable)||"*("||trim(Estimate)||")+";
 	run;
@@ -246,20 +261,20 @@ options mprint mlogic merror serror source2  linesize=256;
 			data 	test1;
 			set 	test1;
 				Length Model 5.;
-					Model= &iteratation.;
+				Model= &iteratation.;
 				drop _NAME_;
 			run;
 
 			data 	test2;
 			set 	test2;
 				Length Model 5.;
-					Model= &iteratation.;
+				Model= &iteratation.;
 				drop _NAME_;
 			run;
 
 			data test12;
 			  retain 	Model Percent_Concordant Percent_Discordant Percent_Tied 
-						Pairs Somers__D Gamma Tau_a c Total_Variable;
+					Pairs Somers__D Gamma Tau_a c Total_Variable;
 			merge test1 test2;
 					Format Total_Variable 12.;
 						Total_Variable=(&nbr_var.-1);
@@ -267,16 +282,16 @@ options mprint mlogic merror serror source2  linesize=256;
 						Model_Variables = "&model_var.";
 			by Model;
 					label 
-						Model				=	'Model'
+						Model			=	'Model'
 						Percent_Concordant 	= 	'Percent Concordant'
 						Percent_Discordant 	= 	'Percent Discordant'
 						Percent_Tied		=	'Percent Tied'
-						Pairs				=   'Pairs'
-						Somers__D			=	'Somers D'
-						Gamma				=	'Gamma'
-						Tau_a				=	'Tau-a'
-						c					=	'AUC/C-Stat/Area under curve'
-						Total_Variable		=   'Total Number of variables in the Model'
+						Pairs			=   	'Pairs'
+						Somers__D		=	'Somers D'
+						Gamma			=	'Gamma'
+						Tau_a			=	'Tau-a'
+						c			=	'AUC/C-Stat/Area under curve'
+						Total_Variable		=   	'Total Number of variables in the Model'
 					;
 			run;
 	%end;
@@ -288,16 +303,16 @@ options mprint mlogic merror serror source2  linesize=256;
 					Percent_Concordant 	= ' ';
 					Percent_Discordant 	= ' ';
 					Percent_Tied 		= ' ';
-					Pairs				= ' ';
+					Pairs			= ' ';
 				Length Somers__D Gamma Tau_a c $5.;
-					Somers__D			= ' ';
-					Gamma 				= ' ';
-					Tau_a				= ' ';
-					c					= ' ';
+					Somers__D		= ' ';
+					Gamma 			= ' ';
+					Tau_a			= ' ';
+					c			= ' ';
 				Format Total_Variable 12.;
 					Total_Variable		= (&nbr_var.-1);
 				Length Model_Variables $560.;
-					Model_Variables = "&model_var.";
+					Model_Variables 	= "&model_var.";
 			run;
 	%End;
 	proc append data = test12 	base= _STAT_ force; 	run;
@@ -313,15 +328,15 @@ options mprint mlogic merror serror source2  linesize=256;
 	/* VIF */; 			
 	ods output 	parameterestimates=vif (keep=variable VarianceInflation);
 		proc reg data=&dev_data.; 	
-			model &bad_var. = 	&model_var./ VIF; 
+			model &bad_var. = &model_var./ VIF; 
 			weight &weight_var.;
 		run; quit;
 
 	/* Correlation with Bad/dependend variable*/ 	
 		proc corr data=&dev_data. NOSIMPLE NOPROB noprint	outp=bad_corr; 	
 			var	&model_var. ; 
-			weight &weight_var.;	
-			with &bad_var.;
+			weight 	&weight_var.;	
+			with 	&bad_var.;
 		run; quit;
 		data bad_corr;
 		set bad_corr;
@@ -366,11 +381,11 @@ options mprint mlogic merror serror source2  linesize=256;
 	proc append data = _STAT_ 	base=summ._MODEL_STAT_ force; 			run;
 	proc sort 	data = summ._MODEL_STAT_ NODUPRECS; by Model; 			run;
 	Title "Model Iteratation-Summary";
-	proc print 	data = summ._MODEL_STAT_ noobs; 						run;
+	proc print 	data = summ._MODEL_STAT_ noobs; 				run;
 	proc sql ; 	select final_eq as Scoring_Logic from estimate4;		quit; 
 	Title "Model-Summary";
-	Proc print data = _model_summary_(drop=Negative_Estimate)	noobs;	run;
-	Proc delete data = _STAT_  estimate estimate4 vif bad_corr bad_corr1 corr  ;run;
+	Proc print data = _model_summary_(drop=Negative_Estimate)	noobs;		run;
+	Proc delete data = _STAT_  estimate estimate4 vif bad_corr bad_corr1 corr  ;	run;
 	%global total_var MAX_VIF MAX_P	MIN_WaldChiSq Dis_Esti_Neg; 
 	proc sql noprint; select count(Variable) into: total_var from _model_summary_	where variable ne "Intercept";
 	proc sql noprint; 
@@ -783,15 +798,12 @@ options mprint mlogic merror serror source2  linesize=256;
 %let P_Value_CUT_OFF		= 0.05				;	/* P value significant level,drop varible based on it*/
 %let TOTAL_NO_OF_VAR		= 10				;	/* Total number of variable in the model*/
 
-%let varlist 			= &woe_var_list.
-											;	/* List of model variable */
+%let varlist 			= &woe_var_list.		;	/* List of model variable */
 
 %let info_val_data		= overall			;	/* Information value data */
-%let infoval_data_path	= C:\Users\1567478\Desktop\TW_COL_1\data\				
-											;	/* Provide the path of info val dataset generated by auto biining*/
-%let Excel				= 1					;	/* 1=multiple excel file for each Iteration, 2=one excel file*/
-%let output				= C:\Users\1567478\Desktop\TW_COL_1\data\				
-											;	/* save output report in this location as C:\Users\Lenovo\ */;
+%let infoval_data_path		= C:\Users\1567478\Desktop\	;	/* Provide the path of info val dataset generated by auto biining*/
+%let Excel			= 1				;	/* 1=multiple excel file for each Iteration, 2=one excel file*/
+%let output			= C:\Users\1567478\Desktop\	;	/* save output report in this location as C:\Users\Lenovo\ */;
 
 /***************************************************************************************************************/
 
@@ -868,10 +880,6 @@ CT_OPS_ACT_CD_RV_6MW
 CT_OPS_TXN_HARD_1MW
 MAX_PL_AINT_1MW
 TM_SN_LS_OPS_NRPCW
-
-
-
-
 ;
 
 

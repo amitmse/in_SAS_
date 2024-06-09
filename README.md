@@ -1,32 +1,27 @@
 # SAS macro for Logistic (Scorecard) Model Development
 
-1. Logistic Model: This one iterates Logistic Regression Model and provide range of model options.
-
-   Final model is based of following options ( user cut-off ):
-	   - VIF			
-	   - Sign of beta		
-	   - P-Value		
-	   - No. of variables
+1. Logistic Model: 
+	This one iterates Logistic Regression Model and provide range of model options.
+   	Final model is based of following options ( user cut-off ):
+	   	- VIF			
+	   	- Sign of beta		
+	   	- P-Value		
+	   	- No. of variables
+	Along with model it provides following metrics: 
+		- KS					   
+		- Concordant, Discordant, Pairs, Somers D   
+		- AUC/C-Stat/Area under curve		   
+		- Correlation with bad and model variable
    
-   https://github.com/amitmse/in_SAS_/blob/master/Logistic_Model_Iteration_final.sas
+   	https://github.com/amitmse/in_SAS_/blob/master/Logistic_Model_Iteration_final.sas
 
-   
-
-
-Along with model it provides following metrics: 
-	- KS					   
-	- Concordant, Discordant, Pairs, Somers D   
-	- AUC/C-Stat/Area under curve		   
-	- Correlation with bad and model variable  
-
-   
-3. Variable Binning (WoE monotonic) :
+1. Variable Binning (WoE monotonic) :
 
       https://github.com/amitmse/in_SAS_/blob/master/Automatic_binning_for_numeric_and_character_variables_woe_method.sas
    
       https://github.com/amitmse/in_SAS_/blob/master/Woe_calculation_Macro.sas
    
-4. Information Value :    
+2. Information Value :    
 
       https://github.com/amitmse/in_SAS_/blob/master/Information_value_Raw_and_Monotonic_binning.sas
    
@@ -36,7 +31,7 @@ Along with model it provides following metrics:
    
       https://github.com/amitmse/in_SAS_/blob/master/Information_value_with_Weight.sas
       
-6. Exploratory Data Analysis (EDA) : 
+3. Exploratory Data Analysis (EDA) : 
       
       https://github.com/amitmse/in_SAS_/blob/master/EDA.sas
    
@@ -48,7 +43,7 @@ Along with model it provides following metrics:
    
       https://support.sas.com/resources/papers/proceedings/proceedings/sugi26/p103-26.pdf
 
-8. Lift Table (KS & GINI):
+4. Lift Table (KS & GINI):
 
       https://github.com/amitmse/in_SAS_/blob/master/Lift_Table_v1.sas
    
@@ -60,33 +55,33 @@ Along with model it provides following metrics:
    
       https://github.com/amitmse/in_SAS_/blob/master/GINI.xlsx
 
-10. Marginal KS:
+5. Marginal KS:
 
       https://github.com/amitmse/in_SAS_/blob/master/Marginal_KS_Macro.sas
 
-11. Characteristic Analysis Macro:
+6. Characteristic Analysis Macro:
 
       https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro.sas
     
       https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro_LP.sas
 
-13. Cluster Analysis : 
+7. Cluster Analysis : 
 
       https://github.com/amitmse/in_SAS_/blob/master/Cluster%20Code.sas
 
-14. Decision Tree:
+8. Decision Tree:
 
       https://github.com/amitmse/in_SAS_/blob/master/Decision%20Tree.sas
 
-15. Vintage Analysis:
+9. Vintage Analysis:
 
       https://github.com/amitmse/in_SAS_/blob/master/3.Vintage_Analysis_Final.sas
 
-16. Chi-Square :
+10. Chi-Square :
 
       https://github.com/amitmse/in_SAS_/blob/master/Chi-Square%20Macro.sas
 
-17. Score scale by PDO
+11. Score scale by PDO
 
       https://github.com/amitmse/in_SAS_/blob/master/Point%20Score%20by%20PDO%20Method.xlsx
     
@@ -100,7 +95,7 @@ Along with model it provides following metrics:
     
       https://github.com/amitmse/in_SAS_/blob/master/Scale_Score_by_PDO.sas
       
-19. Profile Analysis:
+12. Profile Analysis:
 
       https://github.com/amitmse/in_SAS_/blob/master/Profile_Analysis.sas
 

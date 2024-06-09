@@ -568,14 +568,14 @@ proc export data	=	&data._means outfile="&output." dbms = csv replace; run;
 /****************************************************************************************************************/
 /*****User input ************************************************************************************************/
 
-Libname local "Y:\HK_US_PX_01\data\Abhishek\temp\To Amit\";
+Libname local "C:\data\";
 
 %let drop_pct 			= 0.998;
-%let output				= Y:\HK_US_PX_01\data\Abhishek\temp\To Amit\EDA.csv ;
-/*%let SAS_CODE_LOCATION	= C:\Users\1567478\Documents\MyData\04.HK_US_PX_01\data\ ;*/
+%let output			= C:\data\EDA.csv ;
+/*%let SAS_CODE_LOCATION	= C:\data\ ;*/
 
 %better_means( 
- 				data 	=  dev				, 
+ 				data 	=  dev					, 
  				varlst 	= 					, 
  				clss 	= 					,
  				wghts 	= 					,
@@ -585,7 +585,7 @@ Libname local "Y:\HK_US_PX_01\data\Abhishek\temp\To Amit\";
 
 /*********************************************************************************************/
 
-/*proc contents data = ddata.a_probe_to_model_1; run;*/
+/*proc contents data = temp; run;*/
 /*data Dev;*/
 /*	set sashelp.zipcode;*/
 /*	run;*/

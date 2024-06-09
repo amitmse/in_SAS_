@@ -144,37 +144,30 @@ data dev;
 		wgt=1;
 		where segment='Current' and ci_samp_flag = 'OOT-Dec16';	/* 'dev'  	'OOT-Dec16'		'OOT-Dec17'*/
 
-If Score_New <= 454 then rank_score = 1 ; else				
-If 454 < Score_New <= 467 then rank_score = 2 ; else				
-If 467 < Score_New <= 477 then rank_score = 3 ; else				
-If 477 < Score_New <= 485 then rank_score = 4 ; else				
-If 485 < Score_New <= 489 then rank_score = 5 ; else				
-If 489 < Score_New <= 501 then rank_score = 6 ; else				
-If 501 < Score_New <= 508 then rank_score = 7 ; else				
-If 508 < Score_New <= 519 then rank_score = 8 ; else				
-If 519 < Score_New <= 528 then rank_score = 9 ; else				
-If Score_New > 528 then rank_score = 10 ; 				
-				
-			
-
-			
-
- 
-
+			If Score_New <= 454 then rank_score = 1 ; else				
+			If 454 < Score_New <= 467 then rank_score = 2 ; else				
+			If 467 < Score_New <= 477 then rank_score = 3 ; else				
+			If 477 < Score_New <= 485 then rank_score = 4 ; else				
+			If 485 < Score_New <= 489 then rank_score = 5 ; else				
+			If 489 < Score_New <= 501 then rank_score = 6 ; else				
+			If 501 < Score_New <= 508 then rank_score = 7 ; else				
+			If 508 < Score_New <= 519 then rank_score = 8 ; else				
+			If 519 < Score_New <= 528 then rank_score = 9 ; else				
+			If Score_New > 528 then rank_score = 10 ; 						
 	run;
 
 /***********************************************************************************************************************/
-%let input_data     = dev			; 		/* name of score data data */
-%let depdended_var  = cb_achl_bad	;  		/* write name of dependent variable.  (bad=0/1) */
-%let good           = good 			;  		/* mention depdended_var=1 refer to good or bad */
-%let bad            = bad			;    	/* mention depdended_var=0 refer to good or bad */
-%let pd				= pr_old 		; 		/* Probability score 	pr_old			pr_new*/
-%let score			= final_score	; 		/* scaled score 		final_score 	Score_New	*/
-%let order			= 1				; 		/* 1=ascending, 2=descending */
+%let input_data     	= dev			; 		/* name of score data data */
+%let depdended_var  	= cb_achl_bad		;  		/* write name of dependent variable.  (bad=0/1) */
+%let good           	= good 			;  		/* mention depdended_var=1 refer to good or bad */
+%let bad            	= bad			;    		/* mention depdended_var=0 refer to good or bad */
+%let pd			= pr_old 		; 		/* Probability score pr_old pr_new*/
+%let score		= final_score		; 		/* scaled score final_score Score_New	*/
+%let order		= 1			; 		/* 1=ascending, 2=descending */
 %let weight 		= wgt			;		/* Weight variable. If no weight then give 1 */
-%let bin 			= 10				;		/* No of bin in lift table */
-%let custom			= 1			;		/* 1 if lift table in custom score range*/
-
+%let bin 		= 10			;		/* No of bin in lift table */
+%let custom		= 1			;		/* 1 if lift table in custom score range*/
+/***********************************************************************************************************************/
 %KS_CALCULATION()	; 		/* KS calculation */
 
 

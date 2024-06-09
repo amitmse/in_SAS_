@@ -36,13 +36,13 @@
 			- Monotonic WOE binning	
 			- Provide SAS code to generate Monotonic WOE binning variables 
 
-      https://github.com/amitmse/in_SAS_/blob/master/Raw_Information_Value.sas
+      		https://github.com/amitmse/in_SAS_/blob/master/Raw_Information_Value.sas
 
 		Compute Information value
    
-      https://github.com/amitmse/in_SAS_/blob/master/Raw_information_value_LP.sas
+      		https://github.com/amitmse/in_SAS_/blob/master/Raw_information_value_LP.sas
    
-      https://github.com/amitmse/in_SAS_/blob/master/Information_value_with_Weight.sas
+      		https://github.com/amitmse/in_SAS_/blob/master/Information_value_with_Weight.sas
       
 4. Exploratory Data Analysis (EDA) : 
       

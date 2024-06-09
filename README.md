@@ -1,6 +1,6 @@
 # SAS macro for Logistic (Scorecard) Model Development
 
-1. Logistic Model: 
+1. Logistic Model: https://github.com/amitmse/in_SAS_/blob/master/Logistic_Model_Iteration_final.sas
 	
  		This one iterates Logistic Regression Model and provide range of model options.
    		Final model is based of following options ( user cut-off ):
@@ -14,8 +14,6 @@
 			- Concordant, Discordant, Pairs, Somers D
 			- AUC/C-Stat/Area under curve
 			- Correlation with bad and model variable
-   
-   	https://github.com/amitmse/in_SAS_/blob/master/Logistic_Model_Iteration_final.sas
 
 1. Variable Binning (WoE monotonic) :
 

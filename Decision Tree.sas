@@ -6,7 +6,7 @@
 options nocenter macrogen  MFILE nosymbolgen   nomprint  nomlogic  merror serror ls=144 ps=77 nosource2;
 /*********************************************************************************************************/;
 
-%Macro DTree (data=, seed=4321 , maxdepth = , maxbranch =  , minobs = , wt = , ivlist = , codefile = , rulefile= , output=, val_prop=  , dv =);
+%Macro _Decision_Tree_ (data=, seed=4321 , maxdepth = , maxbranch =  , minobs = , wt = , ivlist = , codefile = , rulefile= , output=, val_prop=  , dv =);
 
 		data DT;
 			set &data.;
@@ -126,8 +126,8 @@ options nocenter macrogen  MFILE nosymbolgen   nomprint  nomlogic  merror serror
 
 
 		proc export data	= All_Rules(keep = DT_Node Bad Total Bad_Rate Rules)
-			outfile			= "&Folder_Path.\&output..csv"
-			dbms			= csv
+			outfile		= "&Folder_Path.\&output..csv"
+			dbms		= csv
 			replace;
 		run;
 
@@ -153,19 +153,19 @@ libname ddata "C:\col\data";
 Title "Decision tree for &project.";
 
 /*List of variable*/
-%let Iv_list 		= 	;
+%let var_list 		= 	;
 
 
 /***********************************************************************/
 
-%DTree ( 	 	 data		=	ddata.Mid_Risk 								/* Input data */
+%_Decision_Tree_ ( 	 data		=	mid 									/* Input data */
 			,seed		=	6581									/* */
-			,maxdepth 	=	15 									/* */
-			,maxbranch 	=	3  								 	/* */
-			,minobs 	=	2500 								 	/* */
+			,maxdepth 	=	10 									/* */
+			,maxbranch 	=	2 								 	/* */
+			,minobs 	=	3000 								 	/* */
 			,wt 		=	 						 			/* */
-			,dv		=	c_to_nc_at_3								/* */
-			,ivlist 	=	&iv_list.							 	/* */
+			,dv		=	bad									/* */
+			,ivlist 	=	&var_list.							 	/* */
 			,codefile 	=	"&Folder_Path.\Decision_tree.sas" 					/* */
 			,rulefile	=	"&Folder_Path.\Decision_tree.txt"					/* */
 			,output		=	Final_Decision_tree							/* */

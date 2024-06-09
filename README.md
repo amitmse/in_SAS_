@@ -67,31 +67,31 @@
    
       		https://github.com/amitmse/in_SAS_/blob/master/GINI.xlsx
 
-7. Marginal KS:
+7. Marginal KS: https://github.com/amitmse/in_SAS_/blob/master/Marginal_KS_Macro.sas
 
-      https://github.com/amitmse/in_SAS_/blob/master/Marginal_KS_Macro.sas
+		Compute Marginal KS to check contribution of a variable in a model.      
 
-8. Characteristic Analysis Macro:
+8. Characteristic Analysis Macro: https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro.sas
 
-      https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro.sas
+		 Characteristic Analysis of model variable
     
       		https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro_LP.sas
 
-9. Cluster Analysis : 
+9. Cluster Analysis :  https://github.com/amitmse/in_SAS_/blob/master/Cluster%20Code.sas
 
-      https://github.com/amitmse/in_SAS_/blob/master/Cluster%20Code.sas
+		Cluster Analysis for variable selection   
 
-10. Decision Tree:
+10. Decision Tree: https://github.com/amitmse/in_SAS_/blob/master/Decision%20Tree.sas
 
-      https://github.com/amitmse/in_SAS_/blob/master/Decision%20Tree.sas
+      		Decision Tree for segmentation
 
-11. Vintage Analysis:
+11. Vintage Analysis: https://github.com/amitmse/in_SAS_/blob/master/3.Vintage_Analysis_Final.sas
 
-      https://github.com/amitmse/in_SAS_/blob/master/3.Vintage_Analysis_Final.sas
+      
 
-12. Chi-Square :
+12. Chi-Square : https://github.com/amitmse/in_SAS_/blob/master/Chi-Square%20Macro.sas
 
-      https://github.com/amitmse/in_SAS_/blob/master/Chi-Square%20Macro.sas
+      
 
 13. Score scale by Point to Double the Odds (PDO): https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO_Method.sas
 
@@ -107,8 +107,8 @@
     
       		https://github.com/amitmse/in_SAS_/blob/master/Scale_Score_by_PDO.sas
       
-15. Profile Analysis:
+15. Profile Analysis: https://github.com/amitmse/in_SAS_/blob/master/Profile_Analysis.sas
 
-      https://github.com/amitmse/in_SAS_/blob/master/Profile_Analysis.sas
+      
 
 ***************************************************************************************************************

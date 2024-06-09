@@ -22,8 +22,7 @@
 			- Monotonic WOE binning	
 			- Provide SAS code to generate Monotonic WOE binning variables 
    
-	https://github.com/amitmse/in_SAS_/blob/master/Woe_calculation_Macro.sas
-
+		https://github.com/amitmse/in_SAS_/blob/master/Woe_calculation_Macro.sas
    		Weight of Evidence Calculation
      
 4. **Computation of Information Value and Weight of Evidence Variable**:    

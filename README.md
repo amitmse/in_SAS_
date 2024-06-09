@@ -87,7 +87,7 @@
 
 11. Vintage Analysis: https://github.com/amitmse/in_SAS_/blob/master/3.Vintage_Analysis_Final.sas
 
-      
+		Vintage Analysis to identify performance period 
 
 12. Chi-Square : https://github.com/amitmse/in_SAS_/blob/master/Chi-Square%20Macro.sas
 

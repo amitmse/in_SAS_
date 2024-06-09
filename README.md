@@ -89,11 +89,8 @@
 
 		Vintage Analysis to identify performance period 
 
-12. Chi-Square : https://github.com/amitmse/in_SAS_/blob/master/Chi-Square%20Macro.sas
 
-      
-
-13. Score scale by Point to Double the Odds (PDO): https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO_Method.sas
+12. Score scale by Point to Double the Odds (PDO): https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO_Method.sas
 
 		- Scale score using Point to Double the Odds method.
     		
@@ -106,9 +103,6 @@
       		https://github.com/amitmse/in_SAS_/blob/master/PDO_Calculation.sas
     
       		https://github.com/amitmse/in_SAS_/blob/master/Scale_Score_by_PDO.sas
-      
-15. Profile Analysis: https://github.com/amitmse/in_SAS_/blob/master/Profile_Analysis.sas
-
       
 
 ***************************************************************************************************************

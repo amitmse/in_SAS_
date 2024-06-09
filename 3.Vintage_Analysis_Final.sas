@@ -1,7 +1,10 @@
 
+/**********************************************************************************************************/;
+/****** Vintage Analysis **********************************************************************************/;
+/**********************************************************************************************************/;
 
-libname share "\\192.168.1.200\tvs\TVS-App Scorecard\SAS data";
-libname local   "F:\AMIT\TVS";
+libname share "C:\App Scorecard\SAS data";
+libname local   "C:\AMIT\VS";
 
 options obs=max mprint mlogic;
 
@@ -23,11 +26,11 @@ local.coll_jun13_complete(keep=&keep.)
 EMI_NEW 				= EMI;
 BUCKET_NEW 				= BUCKET;
 
-		If Bucket_New 	= . and EMI_NEW NE 0     	Then 	Bucket_New_1 = Round(SUM(Overdue_EMI,DEMAND_EMI)/EMI_NEW);
+	If Bucket_New 	= . and EMI_NEW NE 0     	Then 	Bucket_New_1 = Round(SUM(Overdue_EMI,DEMAND_EMI)/EMI_NEW);
 ELSE 	If Bucket_New 	= . and EMI_NEW = 0 		Then 	Bucket_New_1 = 0;
 ELSE                                        				Bucket_New_1 = Bucket_New;
 
-POS 				   = Sum(Future_Princ, Overdue_EMI);	if POS<=0 then POS=0;
+POS 				  	= Sum(Future_Princ, Overdue_EMI);	if POS<=0 then POS=0;
 
 Run;
 

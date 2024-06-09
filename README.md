@@ -37,6 +37,8 @@
 			- Provide SAS code to generate Monotonic WOE binning variables 
 
       https://github.com/amitmse/in_SAS_/blob/master/Raw_Information_Value.sas
+
+		Compute Information value
    
       https://github.com/amitmse/in_SAS_/blob/master/Raw_information_value_LP.sas
    

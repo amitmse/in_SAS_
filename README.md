@@ -1,7 +1,8 @@
 # SAS macro for Logistic (Scorecard) Model Development
 
 1. Logistic Model: 
-	This one iterates Logistic Regression Model and provide range of model options.
+	
+ 	This one iterates Logistic Regression Model and provide range of model options.
    	Final model is based of following options ( user cut-off ):
 	   	- VIF			
 	   	- Sign of beta		

@@ -16,15 +16,17 @@
 			- Correlation with bad and model variable
 
 2. **Weight of Evidence Variable computation**: https://github.com/amitmse/in_SAS_/blob/master/Automatic_binning_for_numeric_and_character_variables_woe_method.sas
- 		Create WOE variables for numeric and character variables with following options 
+
+   		Create WOE variables for numeric and character variables with following options 
 			- Raw WOE binning 	
 			- Monotonic WOE binning	
 			- Provide SAS code to generate Monotonic WOE binning variables 
    
 	https://github.com/amitmse/in_SAS_/blob/master/Woe_calculation_Macro.sas
+
    		Weight of Evidence Calculation
      
-3. Information Value :    
+4. Information Value :    
 
       https://github.com/amitmse/in_SAS_/blob/master/Information_value_Raw_and_Monotonic_binning.sas
    
@@ -34,7 +36,7 @@
    
       https://github.com/amitmse/in_SAS_/blob/master/Information_value_with_Weight.sas
       
-4. Exploratory Data Analysis (EDA) : 
+5. Exploratory Data Analysis (EDA) : 
       
       https://github.com/amitmse/in_SAS_/blob/master/EDA.sas
    
@@ -46,7 +48,7 @@
    
       https://support.sas.com/resources/papers/proceedings/proceedings/sugi26/p103-26.pdf
 
-5. Lift Table (KS & GINI):
+6. Lift Table (KS & GINI):
 
       https://github.com/amitmse/in_SAS_/blob/master/Lift_Table_v1.sas
    
@@ -58,33 +60,33 @@
    
       https://github.com/amitmse/in_SAS_/blob/master/GINI.xlsx
 
-6. Marginal KS:
+7. Marginal KS:
 
       https://github.com/amitmse/in_SAS_/blob/master/Marginal_KS_Macro.sas
 
-7. Characteristic Analysis Macro:
+8. Characteristic Analysis Macro:
 
       https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro.sas
     
       https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro_LP.sas
 
-8. Cluster Analysis : 
+9. Cluster Analysis : 
 
       https://github.com/amitmse/in_SAS_/blob/master/Cluster%20Code.sas
 
-9. Decision Tree:
+10. Decision Tree:
 
       https://github.com/amitmse/in_SAS_/blob/master/Decision%20Tree.sas
 
-10. Vintage Analysis:
+11. Vintage Analysis:
 
       https://github.com/amitmse/in_SAS_/blob/master/3.Vintage_Analysis_Final.sas
 
-11. Chi-Square :
+12. Chi-Square :
 
       https://github.com/amitmse/in_SAS_/blob/master/Chi-Square%20Macro.sas
 
-12. Score scale by PDO
+13. Score scale by PDO
 
       https://github.com/amitmse/in_SAS_/blob/master/Point%20Score%20by%20PDO%20Method.xlsx
     
@@ -98,7 +100,7 @@
     
       https://github.com/amitmse/in_SAS_/blob/master/Scale_Score_by_PDO.sas
       
-13. Profile Analysis:
+14. Profile Analysis:
 
       https://github.com/amitmse/in_SAS_/blob/master/Profile_Analysis.sas
 

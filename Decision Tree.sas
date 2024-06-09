@@ -1,8 +1,10 @@
+/**********************************************************************************************************/;
+/****** Decision Tree *************************************************************************************/;
+/*********************************************************************************************************/;
 
-
-/*********************************************************************************************/
+/**********************************************************************************************************/;
 options nocenter macrogen  MFILE nosymbolgen   nomprint  nomlogic  merror serror ls=144 ps=77 nosource2;
-/*********************************************************************************************/
+/*********************************************************************************************************/;
 
 %Macro DTree (data=, seed=4321 , maxdepth = , maxbranch =  , minobs = , wt = , ivlist = , codefile = , rulefile= , output=, val_prop=  , dv =);
 
@@ -17,15 +19,15 @@ options nocenter macrogen  MFILE nosymbolgen   nomprint  nomlogic  merror serror
 						maxdepth				=	&maxdepth. 
 						maxbranch				=	&maxbranch. 
 						minleafsize				=	&minobs. 		nodes 	;
-		  				target 			  			&dv.					;
-		   				input  			  			&ivlist.				;
-						weight 			  			wgt						;
-						grow 			  			CHAID					;
-		   				prune 			  			rep						;
-		   				output nodestats		=	criterion				;
-						code file				=	&codefile.				;
-		     			partition fraction			(validate=&val_prop.)	;
-		     			rules file				=	&rulefile.				;
+		  				target 			  			&dv.				;
+		   				input  			  			&ivlist.			;
+						weight 			  			wgt				;
+						grow 			  			CHAID				;
+		   				prune 			  			rep				;
+		   				output nodestats			=	criterion			;
+						code file				=	&codefile.			;
+		     			partition fraction					(validate=&val_prop.)		;
+		     			rules file					=	&rulefile.			;
 			run;
 
 		Data _Score;
@@ -42,10 +44,10 @@ options nocenter macrogen  MFILE nosymbolgen   nomprint  nomlogic  merror serror
 			set __Import_Rules;
 				format _A_  $16.;
 				F_Del = 0;
-				if substr(compress(in_column),1,4)	= 'NODE' 													then 	_A_ 	= in_column	; 
+				if substr(compress(in_column),1,4)	= 'NODE' 						then 	_A_ 	= in_column	; 
 				if compress(in_column) IN ('*------------------------------------------------------------*') 	then 	F_Del 	= 1			;
-				if length(in_column) > 15 																		then 	do;
-					if 				upcase(substr(compress(in_column),1,14)) 	= 'PREDICTEDVALUE' 				then 	F_Del 	= 1			;	else
+				if length(in_column) > 15 									then 	do;
+					if 				upcase(substr(compress(in_column),1,14)) 	= 'PREDICTEDVALUE' 		then 	F_Del 	= 1		;	else
 					if _A_ = . and 	upcase(substr(compress(in_column),1,9)) 	= 'PREDICTED' 	   				then 	_B_ 	= in_column	;
 				end;
 				if F_Del = 0 then output;
@@ -57,9 +59,9 @@ options nocenter macrogen  MFILE nosymbolgen   nomprint  nomlogic  merror serror
 				retain __Node ;
 				retain num;
 				num = num+1;
-				if not missing(_A_) THEN __Node 	= 	_A_ 												; 
-				if _B_ ne "" 		then new_name	=	substr(_B_,1,index(_B_, '(' )-1) 					;
-				if new_name ne "" 	then new_name_1	=	substr(_B_,1,index(_B_, '=' )-1) 					;
+				if not missing(_A_) THEN __Node 	= 	_A_ 							; 
+				if _B_ ne "" 		then new_name	=	substr(_B_,1,index(_B_, '(' )-1) 			;
+				if new_name ne "" 	then new_name_1	=	substr(_B_,1,index(_B_, '=' )-1) 			;
 				if new_name ne "" 	then new_name_2	=	compress(substr(new_name,index(new_name, '=' )+1)) 	;
 				drop _A_ f_del _B_;
 				if __Node ne in_column then output;
@@ -143,44 +145,31 @@ options nocenter macrogen  MFILE nosymbolgen   nomprint  nomlogic  merror serror
 /*********************************************************************************************/
 /*********************************************************************************************/
 
-%let Project 		= HK PL Collection ;
+%let Project 		= Col ;
 %let Folder_Path 	= C:\Users\1567478\MyData;
-%let data 			= Mid_Risk;
-libname ddata "Y:\HK_US_PX_01\data";
+%let data 		= Mid;
+
+libname ddata "C:\col\data";
 Title "Decision tree for &project.";
 
-
 /*List of variable*/
-%let Iv_list = 
-				an_ivpr_count_derog
-				ab_ivpr_xd_del_gt_1
-				ab_ivpr_pl_delq_0
-				cit_woe_cmsr_gr
-				n_lst_risk_scr
-				cit_woe_seg				
-				ab_ivpr_rect_delq
-				ab_ivpr_enq_l3m				
-				ab_ivpr_high_payroll
-				ab_ivpr_no_payroll
-				ab_ivpr_reversal_0
-			
-	;
+%let Iv_list 		= 	;
 
 
 /***********************************************************************/
 
-%DTree ( 	 data		=	ddata.Mid_Risk 								/* Input data */
-			,seed		=	6581										/* */
-			,maxdepth 	=	15 											/* */
-			,maxbranch 	=	3  								 			/* */
-			,minobs 	=	2500 								 		/* */
-			,wt 		=	 						 					/* */
-			,dv			=	c_to_nc_at_3								/* */
-			,ivlist 	=	&iv_list.							 		/* */
-			,codefile 	=	"&Folder_Path.\Decision_tree.sas" 			/* */
-			,rulefile	=	"&Folder_Path.\Decision_tree.txt"			/* */
+%DTree ( 	 	 data		=	ddata.Mid_Risk 								/* Input data */
+			,seed		=	6581									/* */
+			,maxdepth 	=	15 									/* */
+			,maxbranch 	=	3  								 	/* */
+			,minobs 	=	2500 								 	/* */
+			,wt 		=	 						 			/* */
+			,dv		=	c_to_nc_at_3								/* */
+			,ivlist 	=	&iv_list.							 	/* */
+			,codefile 	=	"&Folder_Path.\Decision_tree.sas" 					/* */
+			,rulefile	=	"&Folder_Path.\Decision_tree.txt"					/* */
 			,output		=	Final_Decision_tree							/* */
-			,val_prop	= 	0.25 										/* */
+			,val_prop	= 	0.25 									/* */
 	    );
 
 /***********************************************************************/

@@ -75,22 +75,13 @@
 
 		 Characteristic Analysis of model variable
     
-      		https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro_LP.sas
-
-9. Cluster Analysis :  https://github.com/amitmse/in_SAS_/blob/master/Cluster%20Code.sas
-
-		Cluster Analysis for variable selection   
+      		https://github.com/amitmse/in_SAS_/blob/master/Characteristic_Analysis_Macro_LP.sas 
 
 10. Decision Tree: https://github.com/amitmse/in_SAS_/blob/master/Decision%20Tree.sas
 
       		Decision Tree for segmentation
 
-11. Vintage Analysis: https://github.com/amitmse/in_SAS_/blob/master/3.Vintage_Analysis_Final.sas
-
-		Vintage Analysis to identify performance period 
-
-
-12. Score scale by Point to Double the Odds (PDO): https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO_Method.sas
+11. Score scale by Point to Double the Odds (PDO): https://github.com/amitmse/in_SAS_/blob/master/Point_Score_By_PDO_Method.sas
 
 		- Scale score using Point to Double the Odds method.
     		

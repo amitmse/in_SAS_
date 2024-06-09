@@ -1,8 +1,24 @@
 # SAS macro for Logistic (Scorecard) Model Development
 
-1. Logistic Model : Iterate Logistic Regression Model based on VIF, Sign of beta, P-Value, No. of variables
+1. Logistic Model: This one iterates Logistic Regression Model and provide range of model options.
 
+   Final model is based of following options ( user cut-off ):
+	   - VIF			
+	   - Sign of beta		
+	   - P-Value		
+	   - No. of variables
+   
    https://github.com/amitmse/in_SAS_/blob/master/Logistic_Model_Iteration_final.sas
+
+   
+
+
+Along with model it provides following metrics: 
+	- KS					   
+	- Concordant, Discordant, Pairs, Somers D   
+	- AUC/C-Stat/Area under curve		   
+	- Correlation with bad and model variable  
+
    
 3. Variable Binning (WoE monotonic) :
 

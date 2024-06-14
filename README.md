@@ -15,10 +15,9 @@
 			- AUC/C-Stat/Area under curve
 			- Correlation with bad and model variable
 
-2. **Computation of Weight of Evidence Variable**: https://github.com/amitmse/in_SAS_/blob/master/Automatic_binning_for_numeric_and_character_variables_woe_method.sas
+2. **Computation of Weight of Evidence (WOE) Variable**: https://github.com/amitmse/in_SAS_/blob/master/Automatic_binning_for_numeric_and_character_variables_woe_method.sas
 
    		Create WOE variables for numeric and character variables with following options 
-			- Raw WOE binning 	
 			- Monotonic WOE binning	
 			- Provide SAS code to generate Monotonic WOE binning variables 
    

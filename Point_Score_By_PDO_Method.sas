@@ -1,5 +1,5 @@
 
-Libname ddata 'C:\SC';
+Libname ddata 'C:\test_SC_CS';
 
 /*
 data ddata.model_score;

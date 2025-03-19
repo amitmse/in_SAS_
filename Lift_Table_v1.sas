@@ -158,7 +158,7 @@ data dev;
 
 /***********************************************************************************************************************/
 %let input_data     	= dev			; 		/* name of score data data */
-%let depdended_var  	= cb_achl_bad		;  		/* write name of dependent variable.  (bad=0/1) */
+%let depdended_var  	= bad			;  		/* write name of dependent variable.  (bad=0/1) */
 %let good           	= good 			;  		/* mention depdended_var=1 refer to good or bad */
 %let bad            	= bad			;    		/* mention depdended_var=0 refer to good or bad */
 %let pd			= pr_old 		; 		/* Probability score pr_old pr_new*/

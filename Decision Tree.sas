@@ -103,7 +103,7 @@ options nocenter macrogen  MFILE nosymbolgen   nomprint  nomlogic  merror serror
 			as select 			_Node_ 		as DT_Node, 
 								/*sum(Outstanding_Balance) as ostd_balance, */
 								sum(&dv.) 	as Bad, 
-								count(&dv.) as Total, 
+								count(&dv.) 	as Total, 
 								calculated Bad/calculated Total as Bad_Rate format = Percent10.2
 			from 				_Score
 			group by 			1; 
@@ -145,9 +145,9 @@ options nocenter macrogen  MFILE nosymbolgen   nomprint  nomlogic  merror serror
 /*********************************************************************************************/
 /*********************************************************************************************/
 
-%let Project 		= Col ;
-%let Folder_Path 	= C:\Users\1567478\MyData;
-%let data 		= Mid;
+%let Project 		= test ;
+%let Folder_Path 	= C:\Users\;
+%let data 		= test;
 
 libname ddata "C:\col\data";
 Title "Decision tree for &project.";
@@ -158,7 +158,7 @@ Title "Decision tree for &project.";
 
 /***********************************************************************/
 
-%_Decision_Tree_ ( 	 data		=	mid 									/* Input data */
+%_Decision_Tree_ ( 	 data		=	test 									/* Input data */
 			,seed		=	6581									/* */
 			,maxdepth 	=	10 									/* */
 			,maxbranch 	=	2 								 	/* */

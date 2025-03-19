@@ -26,8 +26,8 @@ Proc iml;
 
 
 /********************************************************/
-proc import datafile	= "Y:\KR_PL_IFRS9_01\Docs\Segmentation\FLPD Segments\List_Combination_MEV.csv"
-			out			= List_Combination_MEV
+proc import datafile	= "C:\Docs\List_Combination.csv"
+			out		= List_Combination
 			dbms		= csv	replace;
 			guessingrows= 3000;
 	run;

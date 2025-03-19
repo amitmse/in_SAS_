@@ -41,13 +41,13 @@
 		data test3;
 			retain  _NAME_	_LABEL_ Lowest_score_00_to_20_pct Score_20_to_40_pct Score_40_to_60_pct Score_60_to_80_pct Highest_score_80_to_100_pct;
 			set test3;				
-				label _NAME_						= "Variable";
-				label _LABEL_						= "Variable Description";
-				label Lowest_score_00_to_20_pct 	= "Lowest score range: 00% to 20%";
+				label _NAME_					= "Variable";
+				label _LABEL_					= "Variable Description";
+				label Lowest_score_00_to_20_pct 		= "Lowest score range: 00% to 20%";
 				label Score_20_to_40_pct			= "Medium score range: 20% to 40%";
 				label Score_40_to_60_pct			= "Medium score range: 40% to 60%";
 				label Score_60_to_80_pct			= "Medium score range: 60% to 80%";
-				label Highest_score_80_to_100_pct 	= "Highest score range: 80% to 100%";
+				label Highest_score_80_to_100_pct 		= "Highest score range: 80% to 100%";
 				rename _NAME_ = Variable _LABEL_ = Label;
 			run;
 
@@ -63,12 +63,12 @@
 
 /*************************************************************************/
 /*************************************************************************/
-libname a 'Y:\HK_US_PX_01\data\Abhishek\temp\To Amit';
+libname a 'C:\XXX_01\temp';
 
-%let score 		= cs_score_HK_CCC_PD;
-%let varlist 	= rc_num_delq_xd sum_AV_ASCA_STMT_BAL;
-%let indata		= a.vc_scored_dev_dirty;
-%let output_path= Y:\HK_US_PX_01\data\Abhishek\temp\To Amit;
+%let score 		= bscore;
+%let varlist 		= var_1 var_2;
+%let indata		= scored_dev;
+%let output_path	= C:\XXX_01\temp;
 /*************************************************************************/
 /*************************************************************************/
 %profile();

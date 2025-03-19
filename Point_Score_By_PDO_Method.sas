@@ -1,5 +1,5 @@
 
-Libname ddata 'Y:\SL_CC_A_01\data\New_data';
+Libname ddata 'C:\SC';
 
 /*
 data ddata.model_score;
@@ -23,7 +23,7 @@ data ddata.model_score;
 data    Point_Score;
       set ddata.model_score      ;
 
-		PDO			= 30;
+		PDO		= 30;
 		ODDs		= 100;
 		Base_Score	= 500;
 
@@ -31,12 +31,12 @@ data    Point_Score;
 		Offset 		= Base_score - round(Factor*log(odds),1);
 
 		/*Point Score by Variable*/
-		p_Intercept					= round(-0.8872*-Factor,1)							;		
+		p_Intercept			= round(-0.8872*-Factor,1)							;		
 		p_sumlim_fcrd_ttrad_t		= round(sumlim_fcrd_ttrad_t*-0.0126*-Factor,1)		;
 		p_cdlq_12m_fusec_ttrad_cap	= round(cdlq_12m_fusec_ttrad_cap*0.3619*-Factor,1)	;
 		p_count_6m_eeval_cap		= round(count_6m_eeval_cap*0.53*-Factor,1)			;
-		p_b_custcat_good			= round(b_custcat_good*-0.9389*-Factor,1)			;
-		p_util_fcrd_ttrad			= round(util_fcrd_ttrad*0.8833*-Factor,1)			;
+		p_b_custcat_good		= round(b_custcat_good*-0.9389*-Factor,1)			;
+		p_util_fcrd_ttrad		= round(util_fcrd_ttrad*0.8833*-Factor,1)			;
 		p_mob_max_ttrad_t_cap		= round(mob_max_ttrad_t_cap*-0.7118*-Factor,1)		;
 		
 		p_score = round(sum(	Offset,						p_Intercept,			
@@ -113,7 +113,7 @@ data test;
 data test;
 	set test;
 
-		PDO			= 30;
+		PDO		= 30;
 		ODDs		= 100;
 		Base_Score	= 500;
 
@@ -157,7 +157,7 @@ data test;
 		Offset 					= Base_score - round(Factor*log(odds),1);
 
 		p_util					= util/100;
-		p_util_fcrd_ttrad		= round(p_util*0.8833*-Factor,1)			;
+		p_util_fcrd_ttrad			= round(p_util*0.8833*-Factor,1)			;
 
 run;
 

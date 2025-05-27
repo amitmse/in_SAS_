@@ -1,0 +1,105 @@
+libname data 'G:\My Drive\Study\ML\01.Logistic Regression';
+
+%let dev_dsn=data.c_ivprep;
+%let dv=cb_hold_bad;
+%let weight=cv_ivpr_wt;
+
+%let neutralize_vars=
+cb_ivpr_avg_aum8k
+crt_ivpr_ou_mob
+cpt_ivpr_on_pl_aum_cap;
+
+%let model_vars=
+cb_ivpr_delq_all
+cb_ivpr_nodelq_lst12m
+cb_ivpr_ccrl_lm0
+cb_ivpr_crb_loan_inq0
+cb_ivpr_ml_os
+cb_ivpr_avg_aum8k
+cnt_ivpr_xdpd_l6m
+crt_ivpr_ou_mob
+cnt_ivpr_new_fac
+cpt_ivpr_ccrl_uti
+cnt_ivpr_crb_loan_inq_l3m
+cnt_ivpr_crb_wrst_del_cap
+cpt_ivpr_on_pl_aum_cap
+;
+
+/*Check the model eqn through proc logistic to see if it matches scoring equation*/
+proc logistic data=&dev_dsn outest=estms descending;
+model &dv.=&model_vars./stb;
+score data=&dev_dsn. out=scr_dsn;
+weight &weight.;
+run;
+
+data scr_dsn;
+set scr_dsn;
+log_odds=log(p_1/p_0);
+ones=0;
+run;
+
+%let neutralize_vars=cb_ivpr_avg_aum8k crt_ivpr_ou_mob cpt_ivpr_on_pl_aum_cap;
+
+options mprint;
+
+%macro neutralize_var();
+
+data final_neutral_scores;
+length name $ 40;
+length neutral_score 8;
+run;
+
+%local i;
+%let i=1;
+
+%local neu_var;
+
+%do %while(%scan(&neutralize_vars ,&i) ne);
+%let neu_var=%scan(&neutralize_vars ,&i);
+proc sql noprint;
+select &neu_var.
+into :coeff_&neu_var. trimmed
+from estms
+run;
+%let i=%eval(&i+1);
+%end;
+
+%let i=1;
+
+data scr_dsn;
+set scr_dsn;
+%do %while(%scan(&neutralize_vars ,&i) ne);
+%let neu_var=%scan(&neutralize_vars ,&i);
+neu_&neu_var.=log_odds-&&coeff_&neu_var. * &neu_var.;
+%let i=%eval(&i+1);
+%end;
+
+run;
+
+%let i=1;
+
+%do %while(%scan(&neutralize_vars ,&i) ne);
+proc logistic data=scr_dsn descending outest=ns_%scan(&neutralize_vars ,&i);
+model &dv.= /offset=neu_%scan(&neutralize_vars ,&i);
+weight &weight.;
+run;
+
+data temp;
+length name $ 40;
+set ns_%scan(&neutralize_vars ,&i)(keep=_name_ intercept);
+name="%scan(&neutralize_vars ,&i)";
+rename intercept=neutral_score;
+run;
+
+data final_neutral_scores;
+set final_neutral_scores temp;
+if name ne "";
+run;
+
+%let i=%eval(&i+1);
+
+%end;
+
+%mend;
+
+%neutralize_var()

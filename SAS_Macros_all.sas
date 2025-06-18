@@ -1145,7 +1145,7 @@ run;
 
 
 /************************************************************************/
-/*
+
 data person; cont 
 input ob $ ac $ ku $ po $;
 datalines;
@@ -1176,7 +1176,7 @@ Bhola    	:  9572766227
 Tinku    	:  9980718890  	7644097050         
 Rinku  		:  8130228909  	9711163323;
 run;
-*/
+
 /*****Q18*******************************************************************/
 
 options nocenter macrogen  MFILE symbolgen   mprint  mlogic  merror serror ls=144 ps=77 source2;

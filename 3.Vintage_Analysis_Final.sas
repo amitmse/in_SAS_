@@ -6,6 +6,7 @@
 libname share "C:\App Scorecard\SAS data";
 libname local   "C:\AMIT\VS";
 
+
 options obs=max mprint mlogic;
 
 %let keep = DUE_AGMTNO CUTDATE FIRST_EMI_DATE EMI Bucket FUTURE_EMI OVERDUE_EMI DEMAND_EMI EMI_OUTSTANDING FUTURE_PRINC ;

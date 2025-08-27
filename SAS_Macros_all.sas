@@ -1149,6 +1149,7 @@ run;
 data person; contmobile 
 input ob $ ac $ ku $ po $;
 datalines;
+baxk:amtmonx
 AK:9611355240:
 Kali:9905474017:7549432466:9341276380:9611227241:
 Aprajita:7506746588:

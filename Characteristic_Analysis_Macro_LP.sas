@@ -9,7 +9,7 @@
 %let Weight			= 1;			 		/* Weight variable name, */
 %let No_Var			= 3;			 		/* Total Number of variable for Characteristic Analysis*/
 %let pd				= score	;					/* probability from logistic for LP*/
-%let CA_Output		= Y:\TW_US_C_01\docs\Model_Iteration\PL\New Model Iterations\CA.xls; /* Output file name with location*/
+%let CA_Output		= C:\docs\Model_Iteration\PL\New Model Iterations\CA.xls; /* Output file name with location*/
 
 /* List of variables for Characteristic Analysis */
 %let CA_Var_list	= 	ab_ivpr_st_roll_3m	crt_pl_mob_fst_woe crt_inv_lst_sucs_cntct_woe; 
@@ -188,3 +188,4 @@ options mprint mlogic symbolgen;
 /**********************************************************************************************************************/
 
 %CA;
+

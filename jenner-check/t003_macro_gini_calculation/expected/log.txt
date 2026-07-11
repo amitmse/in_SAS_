@@ -1,0 +1,84 @@
+
+NOTE: Option OBS changed to 100.
+NOTE: DATA cur
+
+NOTE: Processing inline DATALINES (15 lines)
+
+NOTE: Read 15 rows from DATALINES.
+NOTE: Wrote cur (15 rows, 2 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA dev
+
+
+NOTE: Read 15 rows from cur.
+NOTE: Wrote dev (15 rows, 3 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA dev_1
+
+
+NOTE: Read 15 rows from dev.
+NOTE: Wrote dev_1 (15 rows, 4 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FREQ
+NOTE: Output dataset BadsCount has 2 observations and 3 variables.
+NOTE: PROC FREQ statement used.
+NOTE: PROC SQL 
+
+NOTE: Macro variable TOTAL_BAD = 7
+NOTE: PROC SQL statement used.
+NOTE: PROC SQL 
+
+NOTE: Macro variable TOTAL_GOOD = 8
+NOTE: PROC SQL statement used.
+15
+7
+8
+0.4666666666666667
+NOTE: PROC MEANS
+NOTE: Output dataset data2 has 15 observations and 5 variables.
+NOTE: PROC MEANS statement used.
+NOTE: DATA data3
+
+
+NOTE: Read 15 rows from data2.
+NOTE: Wrote data3 (15 rows, 11 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SORT data=data3
+
+NOTE: Read 15 rows from data3.
+NOTE: Wrote data3 (15 rows, 11 columns).
+NOTE: PROC SORT statement used.
+NOTE: DATA Lift_Table
+
+
+NOTE: Read 15 rows from data3.
+NOTE: Wrote Lift_Table (15 rows, 13 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SQL 
+
+NOTE: Table _summary_ks_ created.
+NOTE: PROC SQL statement used.
+NOTE: PROC DELETE datasets=dev_1 data2 data3 BadsCount
+
+NOTE: Deleting DEV_1 (memtype=DATA).
+NOTE: Deleting DATA2 (memtype=DATA).
+NOTE: Deleting DATA3 (memtype=DATA).
+NOTE: Deleting BADSCOUNT (memtype=DATA).
+NOTE: 4 dataset(s) deleted.
+NOTE: PROC PRINT data=_summary_ks_
+
+NOTE: PROC PRINT completed: 1 observations printed, 2 variables
+NOTE: PROC PRINT data=Lift_Table
+
+NOTE: PROC PRINT completed: 15 observations printed, 13 variables
+

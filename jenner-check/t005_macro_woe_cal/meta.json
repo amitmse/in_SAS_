@@ -1,0 +1,7 @@
+{
+  "bundle": "t005_macro_woe_cal",
+  "source_file": "Woe_calculation_Macro.sas",
+  "source_blob_sha": "3c1116c54de380e329da10e74bbb95f8b7dcc38f",
+  "source_commit": "2b7886546b4e6d8ce07867d1089e7efea054b380",
+  "notes": "%WoE_Cal (PROC FREQ + PROC TRANSPOSE + PROC SQL Weight-of-Evidence calculation) is byte-identical to the source macro definition. The source driver read Dev/Val from an external libname ('F:\\AMIT\\TVS', not available here), so this bundle supplies small mock Dev/Val datasets with the same column shape the macro expects (a pre-binned LTV_B variable + the gbi_tag 0/1 dependent variable). The PROC FREQ crosstab and PROC TRANSPOSE run correctly and reproduce real counts. The final Woe column (log of a remerged Good/Bad ratio via PROC SQL - 'log((Good/sum(Good))/(Bad/sum(bad))) as Woe', a standard SAS PROC SQL remerge pattern) comes back as missing for every row - Jenner 0.1.0 silently returns status ok with missing values for log() applied to a remerged-aggregate ratio expression once a non-aggregate column is also selected (a related, simpler case without the extra column throws a hard DataFusion GROUP BY planning error instead). Both are genuine, reproducible Jenner defects in PROC SQL aggregate remerging, filed upstream as regression tests in set/ - not a bundle authoring error, so the missing Woe values are captured as-is."
+}

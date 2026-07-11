@@ -1,0 +1,71 @@
+
+NOTE: Option OBS changed to 100.
+NOTE: DATA Dev_woe
+
+NOTE: Processing inline DATALINES (12 lines)
+
+NOTE: Read 12 rows from DATALINES.
+NOTE: Wrote Dev_woe (12 rows, 3 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA Val_woe
+
+NOTE: Processing inline DATALINES (8 lines)
+
+NOTE: Read 8 rows from DATALINES.
+NOTE: Wrote Val_woe (8 rows, 3 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FREQ
+NOTE: Output dataset test1 has 7 observations and 4 variables.
+NOTE: ODS plot written: freq_mosaic_ltv_b_gbi_tag.spec.json
+NOTE: PROC FREQ statement used.
+NOTE: PROC TRANSPOSE data=test1
+
+NOTE: Created 4 rows.
+NOTE: Output written to <run-scoped-tmp-path>.avro.
+NOTE: PROC SQL 
+
+NOTE: Table test3 created.
+NOTE: PROC SQL statement used.
+NOTE: PROC SQL 
+
+NOTE: Table test4 created.
+NOTE: PROC SQL statement used.
+NOTE: DATA Dev_woe
+
+
+NOTE: Read 12 rows from test4.
+NOTE: Wrote Dev_woe (12 rows, 4 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SQL 
+
+NOTE: Table test5 created.
+NOTE: PROC SQL statement used.
+NOTE: DATA Val_woe
+
+
+NOTE: Read 8 rows from test5.
+NOTE: Wrote Val_woe (8 rows, 4 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC DELETE datasets=test1 test2 test3 test4 test5
+
+NOTE: Deleting TEST1 (memtype=DATA).
+NOTE: Deleting TEST2 (memtype=DATA).
+NOTE: Deleting TEST3 (memtype=DATA).
+NOTE: Deleting TEST4 (memtype=DATA).
+NOTE: Deleting TEST5 (memtype=DATA).
+NOTE: 5 dataset(s) deleted.
+NOTE: PROC PRINT data=Dev_woe
+
+NOTE: PROC PRINT completed: 12 observations printed, 4 variables
+NOTE: PROC PRINT data=Val_woe
+
+NOTE: PROC PRINT completed: 8 observations printed, 4 variables
+

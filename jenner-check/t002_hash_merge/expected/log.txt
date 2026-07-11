@@ -1,0 +1,124 @@
+
+NOTE: Option OBS changed to 100.
+NOTE: DATA patients
+
+NOTE: Processing inline DATALINES (5 lines)
+
+NOTE: Read 5 rows from DATALINES.
+NOTE: Wrote patients (5 rows, 4 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA appointment_log
+
+NOTE: Processing inline DATALINES (7 lines)
+
+NOTE: Read 7 rows from DATALINES.
+NOTE: Wrote appointment_log (7 rows, 4 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA Inner_Join
+
+
+NOTE: Read 7 rows from appointment_log.
+NOTE: Wrote Inner_Join (6 rows, 6 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA Left_Join
+
+
+NOTE: Read 7 rows from appointment_log.
+NOTE: Wrote Left_Join (7 rows, 7 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA patients_indx
+
+
+NOTE: Read 5 rows from patients.
+NOTE: Wrote patients_indx (5 rows, 5 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA appointment_log_indx
+
+
+NOTE: Read 7 rows from appointment_log.
+NOTE: Wrote appointment_log_indx (7 rows, 5 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA First
+
+
+NOTE: Read 7 rows from appointment_log_indx.
+NOTE: Wrote First (7 rows, 8 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA Second
+
+
+NOTE: Read 5 rows from patients_indx.
+NOTE: Wrote Second (5 rows, 8 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SORT data=patients
+
+NOTE: Read 5 rows from patients.
+NOTE: Wrote patients_formt (5 rows, 4 columns).
+NOTE: PROC SORT statement used.
+NOTE: DATA patients_formt
+
+
+NOTE: Read 5 rows from patients_formt.
+NOTE: Wrote patients_formt (5 rows, 8 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FORMAT library=WORK
+
+NOTE: CNTLIN: Loaded 5 format entries from patients_formt
+NOTE: DATA appointment_log_formt
+
+
+NOTE: Read 7 rows from appointment_log.
+NOTE: Wrote appointment_log_formt (7 rows, 5 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA appointment_log_formt
+
+
+NOTE: Read 7 rows from appointment_log_formt.
+NOTE: Wrote appointment_log_formt (6 rows, 5 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA appointment_log_formt
+
+
+NOTE: Read 6 rows from appointment_log_formt.
+NOTE: Wrote appointment_log_formt (6 rows, 6 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC PRINT data=Inner_Join
+
+NOTE: PROC PRINT completed: 6 observations printed, 6 variables
+NOTE: PROC PRINT data=Left_Join
+
+NOTE: PROC PRINT completed: 7 observations printed, 7 variables
+NOTE: PROC PRINT data=First
+
+NOTE: PROC PRINT completed: 7 observations printed, 8 variables
+NOTE: PROC PRINT data=Second
+
+NOTE: PROC PRINT completed: 5 observations printed, 8 variables
+NOTE: PROC PRINT data=appointment_log_formt
+
+NOTE: PROC PRINT completed: 6 observations printed, 6 variables
+

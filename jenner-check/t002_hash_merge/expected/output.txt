@@ -1,0 +1,48 @@
+
+  DOB  Gender  ID  Visit_Date  Doctor  age
+-----  ------  --  ----------  ------  ---
+ 7568  Female   1  01/31/2012  Walker   10
+ 7568  Female   1  05/29/2012  Walker   10
+-2029  Male     2  02/02/2012  Jones    20
+15067  Male     3  01/15/2012  Jones    30
+ 9555  Female   5  01/29/2012  Smith    50
+ 9555  Female   5  02/06/2012  Smith    50
+
+ID  Visit_Date  Doctor  age  _noop_    dob  gender
+--  ----------  ------  ---  ------  -----  ------
+ 1  01/31/2012  Walker   10       0   7568  Female
+ 1  05/29/2012  Walker   10       .   7568  Female
+ 2  02/02/2012  Jones    20       .  -2029  Male
+ 3  01/15/2012  Jones    30       .  15067  Male
+ 5  01/29/2012  Smith    50       .   9555  Female
+ 5  02/06/2012  Smith    50       .   9555  Female
+ 6  12/10/2012  Mark     60       .      .
+
+ID  Visit_Date  Doctor  age  test    DOB  Gender   _IORC_
+--  ----------  ------  ---  ----  -----  ------  -------
+ 1  01/31/2012  Walker   10  1,10   7568  Female        0
+ 1  05/29/2012  Walker   10  1,10   7568  Female  1230015
+ 2  02/02/2012  Jones    20  2,20  -2029  Male          0
+ 3  01/15/2012  Jones    30  3,30  15067  Male          0
+ 5  01/29/2012  Smith    50  5,50   9555  Female        0
+ 5  02/06/2012  Smith    50  5,50   9555  Female  1230015
+ 6  12/10/2012  Mark     60  6,60   9555  Female  1230015
+
+ID         DOB  Gender  age  test  Visit_Date  Doctor   _IORC_
+--  ----------  ------  ---  ----  ----------  ------  -------
+ 1  09/20/1980  Female   10  1,10       19023  Walker        0
+ 2  06/12/1954  Male     20  2,20       19025  Jones         0
+ 3  04/02/2001  Male     30  3,30       19007  Jones         0
+ 4  08/29/1978  Female   40  4,40       19007  Jones   1230015
+ 5  02/28/1986  Female   50  5,50       19021  Smith         0
+
+ID  Visit_Date  Doctor  age  test  match
+--  ----------  ------  ---  ----  -----
+ 1  01/31/2012  Walker   10  1,10      1
+ 1  05/29/2012  Walker   10  1,10      1
+ 2  02/02/2012  Jones    20  2,20      1
+ 3  01/15/2012  Jones    30  3,30      1
+ 5  01/29/2012  Smith    50  5,50      1
+ 5  02/06/2012  Smith    50  5,50      1
+
+

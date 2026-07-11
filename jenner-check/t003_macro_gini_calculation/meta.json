@@ -1,0 +1,7 @@
+{
+  "bundle": "t003_macro_gini_calculation",
+  "source_file": "GINI.sas",
+  "source_blob_sha": "117a31b071371de9c925e524d9e9ff2fc34868fd",
+  "source_commit": "2b7886546b4e6d8ce07867d1089e7efea054b380",
+  "notes": "%GINI_CALCULATION macro (weighted KS + Gini lift-table builder) is byte-identical to the source. The source driver read 'cur' from an external dataset not shipped with the repo (data cur; set cur; from an undefined table), so this bundle supplies a 15-row mock scored dataset (cb_achl_bad 0/1 flag + final_score) with the same column shape the macro expects; the macro call and its %let parameters are unmodified."
+}

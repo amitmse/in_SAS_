@@ -1,0 +1,7 @@
+{
+  "bundle": "t007_macro_chisq_merge_bin",
+  "source_file": "Chi-Square Macro.sas",
+  "source_blob_sha": "94754f0ee92dc286ceb46e7b937f60b989b7f785",
+  "source_commit": "2b7886546b4e6d8ce07867d1089e7efea054b380",
+  "notes": "%chisq / %chi (an iterative chi-square merge-binning macro for a continuous predictor against a binary target) are byte-identical to the source. The source read 'test.ttd_dev' from an external libname (C:\\Users\\Lenovo\\Downloads\\fwdproject\\test, not available here), so this bundle supplies a 15-row mock ttd_dev dataset with the same column shape the macro expects (LTV + a 0/1 GBI_TAG). One fix vs the source: 'group=10' -> 'groups=10' on the PROC RANK call - the source's 'group=' is not a documented PROC RANK option (GROUPS= is the SAS 9.4 option), so this looks like the author's own typo rather than a Jenner gap, and the same fix was applied in the KS_Macro_with_Weight.sas bundle (t004) in this PR."
+}

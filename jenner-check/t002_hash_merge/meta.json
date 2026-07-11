@@ -1,0 +1,7 @@
+{
+  "bundle": "t002_hash_merge",
+  "source_file": "Merge.sas",
+  "source_blob_sha": "5e5c8596ec83c023aa531d392884bceacdfc1d7b",
+  "source_commit": "2b7886546b4e6d8ce07867d1089e7efea054b380",
+  "notes": "Hash-object, index (KEY=), and format-driven merge techniques from Merge.sas, fully self-contained via the source file's own inline DATALINES (patients / appointment_log). Two edits vs the source: (1) the Inner_Join step's 'if 0 then set appointment_log patients;' variable-declaration idiom was replaced with an explicit LENGTH statement (the technique the source itself already uses two steps later in Left_Join) because Jenner 0.1.0 hangs to its 30s timeout on the conditional multi-dataset SET form - filed upstream as a regression test in set/; (2) trailing PROC PRINT statements were added since the source file builds datasets without ever printing them, and the final 'Self Join' PROC SQL block (which referenced GOOD/BAD tables never defined anywhere in the source file) was dropped."
+}

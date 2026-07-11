@@ -1,0 +1,7 @@
+{
+  "bundle": "t006_pdo_point_score",
+  "source_file": "Point_Score_By_PDO_Method.sas",
+  "source_blob_sha": "2927cd57af624aea6e1c2831bac97f93a7173ffc",
+  "source_commit": "2b7886546b4e6d8ce07867d1089e7efea054b380",
+  "notes": "The 'Point Score by Variable' PDO (Point-to-Double-the-Odds) scorecard scoring DATA step is byte-identical to the source. The source read 'ddata.model_score' from an external libname (C:\\test_SC_CS, not available here), so this bundle supplies a 5-row mock model_score dataset with the same column shape the step expects (odds + var_1 through var_6). The source file's later exploratory sections - a 30-million-row synthetic PROC SQL sweep over a 'limit' variable and a 300-row 'util' sweep, both building lookup tables rather than reusable logic - were not included; the point-scoring DATA step is the complete, reusable technique from this file."
+}

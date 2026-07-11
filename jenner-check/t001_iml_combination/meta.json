@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_iml_combination",
+  "source_file": "Combination.sas",
+  "source_blob_sha": "1ddb1deb3232e91edc7d216faad7f2e40ce932ea",
+  "source_commit": "2b7886546b4e6d8ce07867d1089e7efea054b380",
+  "notes": "PROC IML block generating the 1-of-1 all-variables combination via allcomb(10,10), shape(), and an indexed PRINT with a computed row label - byte-identical to the source except the trailing PROC IMPORT of a local CSV + %LM_Iterate macro loop (needs a real file on disk) was dropped, and a bare RUN; before QUIT; was removed as a Jenner parser workaround (filed as a regression test upstream in set/)."
+}
